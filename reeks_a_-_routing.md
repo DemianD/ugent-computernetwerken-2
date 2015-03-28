@@ -40,5 +40,19 @@ Bij routing hebben we verschillende termen:
 |Eavesdropping of wiretapping|Wissel berichten uit via broadcast, hierdoor kunnen werkposten passief meeluisteren en hun routingtabellen aanpassen.<br />- **Op Linux:** Activeren met `routed -q`<br />- **Op Windows:** Installeer RIP Listener via `Control Panel -> Add or remove windows component -> Network Services -> RIP Listener`. (Er wordt enkel naar RIPv1 geluisterd).|
 
 ### 2.3 Vergelijk de voor- en nadelen van statische en dynamische routing, zonder in detail in te gaan op specifieke routingprocotollen.
+#### Statisch: 
+|Voordelen|Nadelen|
+|---------|-------|
+|Gemakkelijk te implementeren in een klein netwerk|Enkel goed voor makkelijke topologieen|
+|Veilig, geen advertisements verzonden|Configuratie moeilijkheid verhoogt snel|
+|Voorspelbaar|Als link faalt, dan kan men geen verkeer rerouten, dus manuele interventie nodig|
+|Geen algoritme nodig, dus CPU en RAM besparing||
 
+#### Dynamisch:
+|Voordelen|Nadelen|
+|---------|-------|
+|Goed voor alle topologieen|Moeilijker in het begin|
+|Niet afhankelijk van netwerkgrootte|Minder veilig door broadcast en multicast routing updates. (heeft passieve interfaces en authenticatie nodig voor betere beveiliging)|
+|Automatische aanpassingen om verkeer om te leiden|Route hangt af van huidige topologie|
+||Meer CPU, RAM en badnwith nodig|
 ### 2.4 Maak een classificatie van routingprotocollen, volgens 2 criteria. Omschrijf de terminologie die je hierbij invoert. Geef ondermeer aan op welk niveau hetzelfde routingprotocol actief kan zijn, en hoe aan schaalbeperking kan worden gedaan. Geef van elke klasse de meest courante vertegenwoordigers. Het is niet de bedoeling in te gaan op een gedetailleerde vergelijking tussen de verschillende klassen en hun specifieke vertegenwoordigers.
