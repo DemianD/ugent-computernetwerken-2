@@ -56,3 +56,10 @@ Bij routing hebben we verschillende termen:
 |Automatische aanpassingen om verkeer om te leiden|Route hangt af van huidige topologie|
 ||Meer CPU, RAM en badnwith nodig|
 ### 2.4 Maak een classificatie van routingprotocollen, volgens 2 criteria. Omschrijf de terminologie die je hierbij invoert. Geef ondermeer aan op welk niveau hetzelfde routingprotocol actief kan zijn, en hoe aan schaalbeperking kan worden gedaan. Geef van elke klasse de meest courante vertegenwoordigers. Het is niet de bedoeling in te gaan op een gedetailleerde vergelijking tussen de verschillende klassen en hun specifieke vertegenwoordigers.
+#### Volgens Domein (waar zijn ze actief)
+* Interior Gateway Protocol (IGP)
+* Exterior Gateway Protocol (EGP)
+
+#### Volgens Technologie (Welke informatie wordt uitgewisseld)
+* Distance Vector Protocollen
+* Link State Protocollen
