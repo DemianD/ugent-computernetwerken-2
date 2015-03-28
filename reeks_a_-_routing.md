@@ -56,10 +56,32 @@ Bij routing hebben we verschillende termen:
 |Automatische aanpassingen om verkeer om te leiden|Route hangt af van huidige topologie|
 ||Meer CPU, RAM en badnwith nodig|
 ### 2.4 Maak een classificatie van routingprotocollen, volgens 2 criteria. Omschrijf de terminologie die je hierbij invoert. Geef ondermeer aan op welk niveau hetzelfde routingprotocol actief kan zijn, en hoe aan schaalbeperking kan worden gedaan. Geef van elke klasse de meest courante vertegenwoordigers. Het is niet de bedoeling in te gaan op een gedetailleerde vergelijking tussen de verschillende klassen en hun specifieke vertegenwoordigers.
-#### Volgens Domein (waar zijn ze actief)
-* Interior Gateway Protocol (IGP)
+#### Volgens Routingprotocollen
+##### Interior Gateway Protocollen (IGP) / Intra-domein protocollen
+Wisselt routing informatie uit tussen gateways binnen eenzelfde autonoom systeem. Berekenen de beste routes naar om het even welke eindbestemming en verspreiden deze info over alle routers.
+
+* Routing Information Protocol (RIP)
+* Enhanced Interior Gateway Routing Protocol (E-IGRP)
+* Open Shortest Path First Protocol (OSPF)
+* Intermediate System to System Protocol (IS-IS)
+
+##### Exterior Gateway Protocollen / Inter-domein protocollen
+Wisselt routing informatie uit tussen verschillende autonome systemen, waardoor er ook verkeer tussen die systemen mogelijk is. Dit is echter enkel voor de Border Routers van dit Autonoom Systeem.
+
 * Exterior Gateway Protocol (EGP)
+* Gateway to Gateway Protocol (GGP)
+* Border Gateway Protocol (BGPv4) (Bijna altijd gebruikt, geeft elk AS een unieke nummer)
 
 #### Volgens Technologie (Welke informatie wordt uitgewisseld)
-* Distance Vector Protocollen
-* Link State Protocollen
+##### Distance Vector Protocollen
+Vereist dat router buren informeert bij veranderingen
+
+* BGPv4
+* RIP
+* EIGRP
+
+##### Link State Protocollen
+Elke router maakt mapping van de connecties in het netwerk en berekent de beste weg naar elke mogelijke bestemming (routing tabel).
+
+* OSPF
+* IS-IS
