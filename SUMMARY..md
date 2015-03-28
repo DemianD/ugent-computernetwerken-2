@@ -4,5 +4,5 @@
 * [Reeks A - Routing](reeks_a_-_routing.md)
 * [Reeks A - RIP](reeks_a_-_rip.md)
 * [Reeks A - OSPF](reeks_a_-_ospf.md)
-* Reeks A - Draadloze Netwerken
+* [Reeks A - Draadloze Netwerken](reeks_a_-_draadloze_netwerken.md)
 
