@@ -49,7 +49,9 @@ We hebben in het labo het Spanning Tree algoritme gebruikt, dit voorkomt lussen 
 ### 1.4. Hoe kun je, via de uitvoer van een enkele opdracht, op een als bridge geconfigureerd Linux toestel op diverse manieren controleren dat de juiste poorten geblokkeerd zijn, en om welke reden de andere poorten geactiveerd moeten blijven?
 Ze kunnen de topologie bekijken door het commando `brctl showstp <bridgename>` uit te voeren.
 
-    brconn
+> stp moet wel aan staan, dit doen we via `brctl stp <brname> on`.
+
+    br
         bridge id               8000.56b283b000c3
         designated root         8000.02b2c474422e
         root port               3                   path cost               100
@@ -85,5 +87,31 @@ Ze kunnen de topologie bekijken door het commando `brctl showstp <bridgename>` u
         designated cost         0                   hold timer              0.00
         flags
       
-H
+Hier zien we onder het subdeel br wie onze root bridge is en onder de interfaces zien we de kostprijs van het pad (deze kostprijs is de pathcost + designated cost) waarbij de laagste dan de designated port is.
+
+De state blocking betekent dat deze bridge geen paketten gaat forwarden. De geblokkeerde interfaces zijn de interfaces die loops veroorzaken in het netwerk.
 ### 1.5. Hoe weet een multicast bron of router dat hij verantwoordelijk is om multicast berichten af te leveren aan clients (niet-routers) op de diverse subnetwerken waarop hijzelf is aangesloten. Bespreek de addressering en het protocol dat hierbij gehanteerd wordt, inclusief de bijkomende faciliteiten van meer recente versies ervan. Vermeld eveneens de Linux opdracht die hieromtrent informatie kan verschaffen.
+#### Hoe weet men dat men verantwoordelijk is?
+Volgens RFC1112 is vastgelegd dat als het IP Multicast Datagram zijn TTL groter is dan 1 dat deze bron verantwoordelijk is voor het afleveren aan clients. 
+
+#### Addressering
+elk multicast adres valt in de D range van IPv4 (224.0.0.0 -> 239.255.255.255), deze hebben geen subnetmask. Dit omdat men elk adress apart behandelt.
+
+#### Gebruikte protocol
+Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol, er zijn 3 verschillende versies van IGMP.
+
+* IGMPv1
+    * Stuurt report berichten naar groepadres die bereikt moet worden. (adres is dat van het doel adres)
+    * Kan stoppen met zenden op gelijk welk ogenblik.
+* IGMPv2
+    * Stuurt report berichten naar groepadres die bereikt moet worden. (adres is dat van het doel adres)
+    * Stuurt een Leave-Group bericht als deze stopt.
+* IGMPv3
+    * Zelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is hier 224.0.0.22)
+
+Een host gaat IGMP gebruiken om hun interesse te tonen in specifieke multicast groepen. Met als 2 taken om een groep te joinen:
+1. Luister op het laag 2 adres die het IP multicast group mapt.
+2. Toon interesse om de groep te joinen.
+
+Om de status te verversen gaat men regelmatig IGMP Host Mempership Query Messages sturen. Deze sturen Report messages terug voor elke groep waar ze in geinteresseerd zijn.
+
