@@ -4,7 +4,12 @@
 Routing gaat ervoor zorgen dat een bericht wordt afgeleverd aan de gevraagde bestemming. Dit gebeurt door het door te geven aan andere routers als men niet rechtstreeks met de eindbestemming verbonden is, of door het af te geven aan de bestemming als men hier rechtstreeks mee verbonden is.
 
 #### Belangrijkste component
-De belangrijkste component bij routing zijn de routers.
+Zijn de router (hardware speciaal gemaakt voor het verhandelen van berichten) en de gateway (computers die tegelijk deel uitmaken van meerdere LAN en/of wan netwerken. Zorgt voor zware belasting)
+
+#### Werking
+1. Zoek regels in routingtabel waar IP van de bestemming deel uitmaakt van netwerkadres.
+2. Kies meest specifieke regel met de kleinste metriek
+3. Indien niet gevonden, stuur IMCP-Destination Unreachable (ICMP brengt afzender op de hoogte van problemen)
 
 #### Termen
 Bij routing hebben we verschillende termen:
@@ -18,13 +23,21 @@ Bij routing hebben we verschillende termen:
 |Routingtabel|Houdt bij aan welke volgende router de huidige router het bericht best afgeeft|
 |Forwarding address|Volgende router|
 |Netwerkadres|Unieke identificatie|
-|metriek|Kost om eindbestemming te bereiken (meestal hop afstand)|
+|metriek|Kost om eindbestemming te bereiken (meestal hop afstand), als men via het Type Of Service veld een berekeningswijze selecteert dan spreekt men van TOS Routing|
 |lifetime|Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (voral bij automatische routingtabellen)|
 
 #### Problemen
-
+|Probleem|Uitleg|
+|--------|------|
+|Routing Loops|Treedt op als routingtabel voor eindbestemming pad construeert dat terugverwijst naar 1 van de intermediaire routers van het pad. Hierdoor worden berichten rondgestuurd tot TTL verstreken is.|
+|Black holes|Treedt op als het pad naar de eindbestemming niet meer functioneert en dit falen nog niet is opgenomen in de routingtabel van de vorige router op het pad. De router gaat dus IP-datagrammen blijven sturen naar de black hole router en die zullen allemaal verloren gaan.|
 
 ### 2.2 Geef de diverse (inclusief de meest eenvoudige) alternatieven om de routingtabel van niet-routers (o.a. toestellen die slechts op 1 subnetwerk zijn aangesloten) te configureren. Indien er hiertoe op Linux of Windows bijzondere componenten moeten geinstalleerd of geconfigureerd worden, bespreek hoet dit moet gebeuren.
+|Manier|Uitleg|
+|------|------|
+|Statisch: Routetabel handmatig invullen|We kunnen de routingtabellen zelf invullen.<br /><br />- **Op Linux: **Eerst voeren we `sysctl -w net.upv4.ip_forward=1` uit wat ons de rol van router gaat geven en daarna gebruiken we ifconfig, zo kunnen we bijvoorbeeld routes toevoegen door: `ip r r 192.168.18.0/24 via 192.168.16.10` te gebruiken wat een route toevoegt die via de router 16.10 gaat gaan.<br /><br />- **Op Windows: **Hier gaan we router spelen door *IPEnableRouter* op 1 te zetten in het register (in `My Computer\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcipip\Parameters`) en daarna routes toe te voegen via `route add 192.168.17.0 mask 255.255.255.0 192.168.16.1`.|
+|Dynamisch: Router discovery met ICMP|Gebruik van ICMP berichten om de gegevens van een standaardgateway op een subnetwerksegment op te sporen. 2 soorten: <br />- ICMP-Router sollicitation: Computers verzenden bericht naar 224.0.0.2 om de routers te ontdekken<br />- ICMP-Router Advertisement: Antwoorden op sollicitation (en periodiek om de 7 minuten als keep alive).<br />- We kunnen ICMP redirection gebruiken als optimalisatie.|
+|Eavesdropping of wiretapping|Wissel berichten uit via broadcast, hierdoor kunnen werkposten passief meeluisteren en hun routingtabellen aanpassen.<br />- **Op Linux:** Activeren met `routed -q`<br />- **Op Windows:** Installeer RIP Listener via `Control Panel -> Add or remove windows component -> Network Services -> RIP Listener`. (Er wordt enkel naar RIPv1 geluisterd).|
 
 ### 2.3 Vergelijk de voor- en nadelen van statische en dynamische routing, zonder in detail in te gaan op specifieke routingprocotollen.
 
