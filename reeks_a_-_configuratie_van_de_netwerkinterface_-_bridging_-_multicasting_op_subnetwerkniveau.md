@@ -1,2 +1,6 @@
-# Reeks A - Configuratie van de netwerkinterface - Bridging - Multicasting op subnetwerkniveau
-
+## 1. Configuratie van de netwerkinterface - Bridging - Multicasting op subnetwerkniveau
+### 1.1. Bespreek alle (ook meer recente) opdrachten, inclusief hun opties en output, die onder Linux voor de configuratie van de netwerkinterface kunnen gebruikt worden, zowel op de subnetwerklaag als op de internetlaag. Behandel eveneens eventuele configuratiebestanden (inclusief locatie en inhoud). Vergeet in het bijzonder de opstartbestanden niet.
+### 1.2. Bespreek het equivalent onder Windows Server, zowel via de Command Prompt, als via de grafische interface.
+### 1.3. In welke opeenvolgende stappen bepalen een verzameling bridges, die diverse netwerksegmenten tot een enkel subnetwerkgroeperen, welke van hun poorten moeten geblokeerd worden?
+### 1.4. Hoe kun je, via de uitvoer van een enkele opdracht, op een als bridge geconfigureerd Linux toestel op diverse manieren controleren dat de juiste poorten geblokkeerd zijn, en om welke reden de andere poorten geactiveerd moeten blijven?
+### 1.5. Hoe weet een multicast bron of router dat hij verantwoordelijk is om multicast berichten af te leveren aan clients (niet-routers) op de diverse subnetwerken waarop hijzelf is aangesloten. Bespreek de addressering en het protocol dat hierbij gehanteerd wordt, inclusief de bijkomende faciliteiten van meer recente versies ervan. Vermeld eveneens de Linux opdracht die hieromtrent informatie kan verschaffen.
