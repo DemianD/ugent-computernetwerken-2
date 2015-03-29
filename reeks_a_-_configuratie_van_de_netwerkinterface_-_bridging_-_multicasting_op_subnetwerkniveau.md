@@ -21,6 +21,8 @@
 |`/proc/modules`|Bevat de geladen drivers|
 |`/etc/sysconfig/network-scripts`|Bevat files die worden gebruikt voor configuratie interfaces on boot, vb: `ifcfg-etho0` keys in deze file zijn: DEVICE, IPADDR, NETMASK en ONBOOT|
 
+<br />
+<br />
 ### 1.2. Bespreek het equivalent onder Windows Server, zowel via de Command Prompt, als via de grafische interface.
 #### Command Prompt
 |Commando|Werking|
