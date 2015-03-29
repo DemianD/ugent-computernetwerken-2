@@ -9,4 +9,5 @@
 * Reeks B - Multicastrouting
 * Reeks B - Configuratie van DNS servers onder Linux
 * Reeks B - Configuratie van DNS servers onder Linux Deel 2
+* Reeks B - Configuratie van DNS servers onder Linux Deel 3
 
