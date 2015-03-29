@@ -42,12 +42,7 @@
 4. Periodiek Hello Pakketten 
     * Indien geen pakket na timeout (default 10 seconden), dan router als uitgevallen.
         * Gebeurt ook als router uitgevallen verbinding detecteert. 
-5. Als nieuwe router toegevoegd wordt.
-    * Deze router en buur wisselen onmiddel Hello pakketten uit.
-    * Ze besluiten adjaceny te vormen en Database Description pakketten uit te wisselen
-    * Omdat buur router ook LSA's van alle routers bevat wordt huidige router geupdate. (dit met Linke State Requests en Updates)
-    * Router 2 stuurt update naar zijn buren.
-6. Optimalisaties
+5. Optimalisaties
     * Beperken Adjacencies
         * Kies Designated Router (DR)
         * Nu moet er enkel adjacency gevormd worden met DR. DR is adjacent met alle routers van het subnetwerk.
@@ -61,4 +56,17 @@
 
 
 ### 4.2. Beschrijf, o.a. aan de hand van een figuur, wat er precies gebeurt indien er een nieuwe router in een door OSPF gestuurd internetwerk wordt opgenomen.
+![](IC195509.gif)
+
+1. Nadat router 1 is opgenomen, wisselen router 1 en router 2 periodiek Hello pakketten uit op hun verbinding.
+2. Nadat ze elkaar kennen vormen ze een adjacency. Nu wisselen ze Database Description pakketten uit.
+    * Router 1 bevat enkel LSA van zichzelf
+    * Router 2 bevat LSA van alle routers behalve router 1.
+3. Router 1 vraagt in Link State Request aan router 2 om alle LSA's van de routers in het internetwerk en krijgt deze in Link State Update pakketten.
+4. Router 2 doet hetzelfde.
+5. Nu bevatten Router 1 en Router 2 gesynchroniseerde LSDB's en maken ze beide een nieuwe PSF tree. Hierna bereken ze de nieuwe routing tabel.
+6. Router 2 stuurt nu Link State Update naar alle andere routers vanwege router 1
+7. Nu kunnen de volgende routers hun routing tabel updaten, en verder sturen.
+
 ### 4.3. Hoe worden OSPF berichten verpakt (cfr. het OSI 7-lagen model)?
+OSPF pakketten zijn ingekapseld in IP-Datagrammen, er wordt echter gewacht op ontvangstbevestiging. Als een antwoord uitblijft dan wordt dit gezien als het falen van een verbinding.
