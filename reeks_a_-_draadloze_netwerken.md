@@ -62,6 +62,7 @@
 |Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF, berekend op basis van een metriek.|Optimized Link State Routing (OLSR)|- Routes onmiddelijk bruikbaar<br />- Routes aangepast bij wijzigen linkkarakteristieken.|- Grote netwerkbelasting|
 |Reactieve of on-demand protocollen|Pas als we bericht versturen zoeken we een pad, de discovered paths worden gecached voor performantiewinst|Ad Hoc On Demand Distance Vector Routing (AODV)|- Minder netwerkverkeer<br />- Werkt in grote situaties met duizenden knooppunten|- Initiele vertraging voor gegevensoverdracht mogelijk is (ICMP Unreacable)|
 
+<p style="page-break-after:always;"></p>
 ### 5.4. Bespreek een concreet voorbeeld van een implementatie die tot 1 van deze categorieen behoort, met vooral aandacht voor de verschillen met het traditionele routingprotocol (voor bekapelde internetwerken), waarvan het is afgeleid.
 #### Optimized Link State Routing : OLSR
 * LSA's router enkel doorgestuurd door beperkt aantal buren.
