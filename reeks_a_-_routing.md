@@ -40,6 +40,7 @@ Bij routing hebben we verschillende termen:
 |Dynamisch: Router discovery met ICMP|Gebruik van ICMP berichten om de gegevens van een standaardgateway op een subnetwerksegment op te sporen. 2 soorten: <br />- ICMP-Router sollicitation: Computers verzenden bericht naar 224.0.0.2 om de routers te ontdekken<br />- ICMP-Router Advertisement: Antwoorden op sollicitation (en periodiek om de 7 minuten als keep alive).<br />- We kunnen ICMP redirection gebruiken als optimalisatie.|
 |Eavesdropping of wiretapping|Wissel berichten uit via broadcast, hierdoor kunnen werkposten passief meeluisteren en hun routingtabellen aanpassen.<br />- **Op Linux:** Activeren met `routed -q`<br />- **Op Windows:** Installeer RIP Listener via `Control Panel -> Add or remove windows component -> Network Services -> RIP Listener`. (Er wordt enkel naar RIPv1 geluisterd).|
 
+<p style="page-break-after:always;"></p>
 ### 2.3 Vergelijk de voor- en nadelen van statische en dynamische routing, zonder in detail in te gaan op specifieke routingprocotollen.
 #### Statisch: 
 |Voordelen|Nadelen|
