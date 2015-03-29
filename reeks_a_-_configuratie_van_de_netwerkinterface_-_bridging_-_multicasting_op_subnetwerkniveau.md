@@ -92,6 +92,7 @@ Ze kunnen de topologie bekijken door het commando `brctl showstp <bridgename>` u
 Hier zien we onder het subdeel br wie onze root bridge is en onder de interfaces zien we de kostprijs van het pad (deze kostprijs is de pathcost + designated cost) waarbij de laagste dan de designated port is.
 
 De state blocking betekent dat deze bridge geen paketten gaat forwarden. De geblokkeerde interfaces zijn de interfaces die loops veroorzaken in het netwerk.
+<p style="page-break-after:always;"></p>
 ### 1.5. Hoe weet een multicast bron of router dat hij verantwoordelijk is om multicast berichten af te leveren aan clients (niet-routers) op de diverse subnetwerken waarop hijzelf is aangesloten. Bespreek de addressering en het protocol dat hierbij gehanteerd wordt, inclusief de bijkomende faciliteiten van meer recente versies ervan. Vermeld eveneens de Linux opdracht die hieromtrent informatie kan verschaffen.
 #### Hoe weet men dat men verantwoordelijk is?
 Volgens RFC1112 is vastgelegd dat als het IP Multicast Datagram zijn TTL groter is dan 1 dat deze bron verantwoordelijk is voor het afleveren aan clients. 
