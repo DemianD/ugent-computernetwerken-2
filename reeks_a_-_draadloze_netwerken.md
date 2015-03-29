@@ -25,6 +25,7 @@
             Basic rates (Mbps)  : 1 2 5.5 11
             Other rates (Mbps)  : 6 9 12 18 24 36 48 54
          
+<p style="page-break-after:always;"></p>
 #### Output netsh wlan sh int
     There is 1 interface on the system:
      
