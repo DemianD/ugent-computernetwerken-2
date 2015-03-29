@@ -49,8 +49,29 @@
         Hosted network status   : Not available
     
 ### 5.2. In welk opzicht zijn Ad Hoc routingprotocollen (in wireless meshes) anders dan de meer traditionele routingprotocollen (bedoeld voor internetwerken die uit bekabelde subnetwerken bestaan)?
+* Eventuele mobiliteit van de routers
+* Uitvallen en herstel van verbindingen meer frequent, met variabele kwaliteit van de link
+* Bijkomende criteria voor performantie en metriek, zoals stabiliteit onder mobiele omstandigheden, energie verbruik, signaal/ruis verhouding, ...
+* Strikt minimale processing (energieverbruik) en netwerkbelasting gewenst bij topologiewijzigingen
+* Alleen gedistribueerde algoritmen aanvaardbaar.
 
 ### 5.3.Geef de 2 fundamenteel verschillende manieren om Ad Hoc routingprotocollen te realiseren, inclusief hun relatieve voor- en nadelen en hun optimaal toepassingsgebied.
+|Routing Protocol|Beschrijving|Voorbeeld|Voordelen|Nadelen|
+|----------------|------------|---------|---------|-------|
+|Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF|Optimized Link State (OLSR)|Routes onmiddelijk bruikbaar|Grote netwerkbelasting|
+|Reactieve of on-demand protocollen|
+1. Proactieve of table driven protocollen
+    * Werken met een routing tabel zoals RIP of OSPF,
+    * OLSR: Optimized Link State.
+    * Berekend op basis van een metriek
+    * Routes worden aangepast bij wijzigen linkkarakteristieken
+    * Relatief grote netwerkbelasting
+    * Routes onmiddelijk bruikbaar
+2. Reactieve of on-demand protocollen
+    * Pas als we iets versturen gaan we het pad zoeken
+    * Minder netwerkverkeer
+    * Eerste verbinding duurt lang.
+    * AODV: Ad Hoc On Demand Distance Vector Routing
 
 ### 5.4. Bespreek een concreet voorbeeld van een implementatie die tot 1 van deze categorieen behoort, met vooral aandacht voor de verschillen met het traditionele routingprotocol (voor bekapelde internetwerken), waarvan het is afgeleid.
 
