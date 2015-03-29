@@ -25,6 +25,8 @@ RIP berichten worden ingekapseld in UDP segmenten met poortnummers 520. Deze pak
 |--------|------|
 |count-to-infinity|vb: subnet 3 is onbereikbaar. Router 2 stelt metriek in op oneindig voor dit subnetwerk. Als router 1 nu advertisement stuurt voor dat router 2 dit doet, dan gaat router 1 subnet 3 wel nog kunnen bereiken, waardoor router 2 deze zet op de waarde van router 1 en 1 verhoogt. Dit blijft voortgaan tot men een metriekwaarde van 16 heeft.|
 |routing loop|Berichten worden heen en weer gestuurd zolang de TTL niet 0 is, dit kan leiden tot een overbelasting van het netwerk en dus verlies van pakketten.|
+
+<p style="page-break-after:always;"></p>
 ### 3.2. Wat wordt bedoelt met reductie van de convergentieperiode (inclusief oorzaken)? Bespreek de verschillende technieken om dit te verwezenlijken.
 #### Reductie Convergentieperiode
 De reductie van de convergentieperiode gaat de tijd verminderen die nodig is om bij een wijziging terug tot een stabiele toestand te komen.
