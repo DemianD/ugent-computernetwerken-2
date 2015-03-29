@@ -7,4 +7,5 @@
 * [Reeks A - OSPF](reeks_a_-_ospf.md)
 * [Reeks A - Draadloze Netwerken](reeks_a_-_draadloze_netwerken.md)
 * Reeks B - Multicastrouting
+* Reeks B - Configuratie van DNS servers onder Linux
 
