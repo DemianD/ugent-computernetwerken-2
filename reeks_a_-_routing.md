@@ -25,7 +25,7 @@ Bij routing hebben we verschillende termen:
 |Netwerkadres|Unieke identificatie|
 |metriek|Kost om eindbestemming te bereiken (meestal hop afstand), als men via het Type Of Service veld een berekeningswijze selecteert dan spreekt men van TOS Routing|
 |lifetime|Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (voral bij automatische routingtabellen)|
-
+<p style="page-break-after:always;"></p>
 #### Problemen
 |Probleem|Uitleg|
 |--------|------|
