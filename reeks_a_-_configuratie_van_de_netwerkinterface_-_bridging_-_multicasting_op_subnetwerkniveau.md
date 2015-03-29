@@ -47,7 +47,7 @@ We hebben in het labo het Spanning Tree algoritme gebruikt, dit voorkomt lussen 
 3. Deactiveer alle andere poorten die geen designated port zijn of root port.
 4. Breek gelijkheden op.
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<p><!-- pagebreak --></p> 
 ### 1.4. Hoe kun je, via de uitvoer van een enkele opdracht, op een als bridge geconfigureerd Linux toestel op diverse manieren controleren dat de juiste poorten geblokkeerd zijn, en om welke reden de andere poorten geactiveerd moeten blijven?
 Ze kunnen de topologie bekijken door het commando `brctl showstp <bridgename>` uit te voeren.
 
