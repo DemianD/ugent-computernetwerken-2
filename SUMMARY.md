@@ -8,4 +8,5 @@
 * [Reeks A - Draadloze Netwerken](reeks_a_-_draadloze_netwerken.md)
 * Reeks B - Multicastrouting
 * Reeks B - Configuratie van DNS servers onder Linux
+* Reeks B - Configuratie van DNS servers onder Linux Deel 2
 
