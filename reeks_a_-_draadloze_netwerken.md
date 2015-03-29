@@ -58,20 +58,8 @@
 ### 5.3.Geef de 2 fundamenteel verschillende manieren om Ad Hoc routingprotocollen te realiseren, inclusief hun relatieve voor- en nadelen en hun optimaal toepassingsgebied.
 |Routing Protocol|Beschrijving|Voorbeeld|Voordelen|Nadelen|
 |----------------|------------|---------|---------|-------|
-|Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF|Optimized Link State (OLSR)|Routes onmiddelijk bruikbaar|Grote netwerkbelasting|
-|Reactieve of on-demand protocollen|
-1. Proactieve of table driven protocollen
-    * Werken met een routing tabel zoals RIP of OSPF,
-    * OLSR: Optimized Link State.
-    * Berekend op basis van een metriek
-    * Routes worden aangepast bij wijzigen linkkarakteristieken
-    * Relatief grote netwerkbelasting
-    * Routes onmiddelijk bruikbaar
-2. Reactieve of on-demand protocollen
-    * Pas als we iets versturen gaan we het pad zoeken
-    * Minder netwerkverkeer
-    * Eerste verbinding duurt lang.
-    * AODV: Ad Hoc On Demand Distance Vector Routing
+|Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF, berekend op basis van een metriek.|Optimized Link State (OLSR)|- Routes onmiddelijk bruikbaar<br />- Routes aangepast bij wijzigen linkkarakteristieken.|- Grote netwerkbelasting|
+|Reactieve of on-demand protocollen|Pas als we bericht versturen zoeken we een pad, de discovered paths worden gecached voor performantiewinst|Ad Hoc On Demand Distance Vector Routing (OADV)|- Minder netwerkverkeer<br />- Werkt in grote situaties met duizenden knooppunten|- Initiele vertraging voor gegevensoverdracht mogelijk is (ICMP Unreacable)|
 
 ### 5.4. Bespreek een concreet voorbeeld van een implementatie die tot 1 van deze categorieen behoort, met vooral aandacht voor de verschillen met het traditionele routingprotocol (voor bekapelde internetwerken), waarvan het is afgeleid.
 
