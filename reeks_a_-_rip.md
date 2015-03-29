@@ -43,7 +43,6 @@ De reductie van de convergentieperiode gaat de tijd verminderen die nodig is om 
 |Triggered Updates|Routers gaan nu ook bij elke wijziging updates sturen (dit enkel van de wijziging en niet de hele tabel). Als lifetime veld van een route 0 is, dan wordt deze bijna onmiddelijk met metriek 16 gebroadcast, wat de kans op count-to-infinity verkleint. Het reduceert de convergentieperiode aanzienlijk maar er is nog altijd kans op lussen. Ook worden er meer broadcasts gestuurd.|
 |General RIP Request|Bij opstart router wordt dit gebroadcast, de ondersteunde routers gaan nu hun volledige routing tabel doorsturen. Dit wordt gericht gestuurd en voorkomt de 30 secondenwachttijd voor hij de actuele info heeft|
 
-<p style="page-break-after:always;"></p>
 ### 3.3. Bespreek de verschillende verbeteringen van RIPv2 ten opzichte van RIPv1
 #### Multicasting
 RIPv1 Broadcast berichten (maakt silent RIP mogelijk) waardoor er meer netwerkverkeer is. Bij RIPv2 wordt er optioneel naar het multicast adres 224.0.0.9 gestuurd wat het verkeer ten goede komt.
