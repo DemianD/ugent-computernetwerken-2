@@ -55,12 +55,35 @@
 * Strikt minimale processing (energieverbruik) en netwerkbelasting gewenst bij topologiewijzigingen
 * Alleen gedistribueerde algoritmen aanvaardbaar.
 
-### 5.3.Geef de 2 fundamenteel verschillende manieren om Ad Hoc routingprotocollen te realiseren, inclusief hun relatieve voor- en nadelen en hun optimaal toepassingsgebied.
+### 5.3. Geef de 2 fundamenteel verschillende manieren om Ad Hoc routingprotocollen te realiseren, inclusief hun relatieve voor- en nadelen en hun optimaal toepassingsgebied.
 |Routing Protocol|Beschrijving|Voorbeeld|Voordelen|Nadelen|
 |----------------|------------|---------|---------|-------|
-|Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF, berekend op basis van een metriek.|Optimized Link State (OLSR)|- Routes onmiddelijk bruikbaar<br />- Routes aangepast bij wijzigen linkkarakteristieken.|- Grote netwerkbelasting|
-|Reactieve of on-demand protocollen|Pas als we bericht versturen zoeken we een pad, de discovered paths worden gecached voor performantiewinst|Ad Hoc On Demand Distance Vector Routing (OADV)|- Minder netwerkverkeer<br />- Werkt in grote situaties met duizenden knooppunten|- Initiele vertraging voor gegevensoverdracht mogelijk is (ICMP Unreacable)|
+|Proactieve of table driven protocollen|Werken met routing tabel zoals RIP of OSPF, berekend op basis van een metriek.|Optimized Link State Routing (OLSR)|- Routes onmiddelijk bruikbaar<br />- Routes aangepast bij wijzigen linkkarakteristieken.|- Grote netwerkbelasting|
+|Reactieve of on-demand protocollen|Pas als we bericht versturen zoeken we een pad, de discovered paths worden gecached voor performantiewinst|Ad Hoc On Demand Distance Vector Routing (AODV)|- Minder netwerkverkeer<br />- Werkt in grote situaties met duizenden knooppunten|- Initiele vertraging voor gegevensoverdracht mogelijk is (ICMP Unreacable)|
 
 ### 5.4. Bespreek een concreet voorbeeld van een implementatie die tot 1 van deze categorieen behoort, met vooral aandacht voor de verschillen met het traditionele routingprotocol (voor bekapelde internetwerken), waarvan het is afgeleid.
+#### Optimized Link State Routing : OLSR
+* LSA's router enkel doorgestuurd door beperkt aantal buren.
+* Minder overhead door meer selectieve flooding
+* Alle routes verwijzen naar een MPR als eerste hop naar de eindbestemming.
+* MPR Criterium: Beperkte deelverzameling bidirectionele buren van router, zodanig dat alle 2-hop routers onmiddelijke buur zijn van 1 van de geselecteerde MPR's
+* Elke router meldt periodiek (hello) zijn buren, zodat elke router uiteindelijk ook de volledige topologie tot op afstand 2 kent --> MPR selectie
+* Selectieve flooding via MPR's leidt niet noodzakkelijk tot route met optimale metriek
 
 ### 5.5. Bespreek een concreet voorbeeld van een implementatie die tot de andere categorie behoort, nu met een gedetailleerde beschrijving van hoe de routingtabellen door specifieke berichtuitwisselingen ingevuld worden.
+#### Ad Hoc On Demand Distance Vector Routing : AODV
+* Veronderstelt bidirectionele verbindingen
+* TTL route verlengd door elk gebruik ervan
+* Eenvoudig principe: 3 berichttypes volstaan voor basis implementatie
+    1. Bron Broadcast Route Request (RREQ)
+        * RREQ pakket wordt gebroadcast
+        * Nodes die dit ontvangen updaten hun informatie voor de source node en zetten pointers terug naar de source in hun route tabellen.
+        * Heeft ook het meeste recente sequentienummer van de bestemming.
+    2. Unicast van Route Reply (RREP)
+        * Reply als men RREQ heeft ontvangen
+        * Als het de bestemming is, of het heeft een route met sequentienummer ≥ dit in de RREQ, dan wordt RREP terug naar de bron geunicast. Anders wordt de RREQ gebroadcast.
+    3. Route Error (RERR)
+        * Als verbinding verbroken wordt terwijl een route actief is dan wordt er een RERR verstuurd, om te tonen dat deze unbereikbaar is.
+        * Na ontvangst van de RERR kan men terug de route discovery in gang steken als dit gewenst is.
+    
+> Meer info: [http://moment.cs.ucsb.edu/AODV/](http://moment.cs.ucsb.edu/AODV/)
