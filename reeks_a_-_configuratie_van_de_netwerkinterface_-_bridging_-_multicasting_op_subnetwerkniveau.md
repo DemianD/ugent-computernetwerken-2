@@ -123,3 +123,4 @@ Er zijn 3 verschillende versies van IGMP:
     * Dezelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is het multicast adres: 224.0.0.22)
 
 #### Gebruikte Linux Opdracht
+Om de huidige status te zien van de cache kunnen we kijken naar de content van de file `/proc/net/ip_mr_cache`.
