@@ -121,3 +121,5 @@ Er zijn 3 verschillende versies van IGMP:
     * Stuurt een Leave-Group bericht als deze stopt.
 * IGMPv3
     * Dezelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is het multicast adres: 224.0.0.22)
+
+#### Gebruikte Linux Opdracht
