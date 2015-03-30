@@ -40,7 +40,7 @@
 * Disable Interface: `<Interface> Right Click -> Disable` of via status menu.
 
 ### 1.3. In welke opeenvolgende stappen bepalen een verzameling bridges, die diverse netwerksegmenten tot een enkel subnetwerkgroeperen, welke van hun poorten moeten geblokeerd worden?
-We hebben in het labo het Spanning Tree algoritme gebruikt, dit voorkomt lussen in de topologie. Het algoritme werkt zo:
+We hebben in het labo het Spanning Tree Protocol algoritme gebruikt, dit voorkomt lussen in de topologie. Het algoritme werkt zo:
 
 1. Selecteer root bridge (Dit is de bridge met de kleinste bridge ID, bridge priority (2 bytes) + MAC (6 bytes), we kunnen nieuwe bridge laten kiezen door prioriteit te veranderen, dit moet wel in meervouden van 4096!).
 2. Vind laagste kost pad voor de root bridge (We kennen kostprijs toe en laten elke bridge de som maken van de andere bridges tot die root bridge, de goedkoopste poort noemt men de designated root. Ook wordt er een designated port geselecteerd, deze wordt gebruikt om de root bridge te bereiken.) 
