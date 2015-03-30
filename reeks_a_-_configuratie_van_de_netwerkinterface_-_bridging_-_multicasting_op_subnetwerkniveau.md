@@ -104,13 +104,13 @@ elk multicast adres valt in de D range van IPv4 (224.0.0.0 -> 239.255.255.255), 
 Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol, er zijn 3 verschillende versies van IGMP.
 
 * IGMPv1
-    * Stuurt report berichten naar groepadres die bereikt moet worden. (adres is dat van het doel adres)
-    * Kan stoppen met zenden op gelijk welk ogenblik.
+    * Stuurt report berichten naar het groepadres dat bereikt moet worden. (adres is dat van het doel adres)
+    * Kan stoppen met zenden op elk moment.
 * IGMPv2
-    * Stuurt report berichten naar groepadres die bereikt moet worden. (adres is dat van het doel adres)
+    * Stuurt report berichten naar het groepadres dat bereikt moet worden. (adres is dat van het doel adres)
     * Stuurt een Leave-Group bericht als deze stopt.
 * IGMPv3
-    * Zelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is hier 224.0.0.22)
+    * Dezelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is het multicast adres: 224.0.0.22)
 
 Een host gaat IGMP gebruiken om hun interesse te tonen in specifieke multicast groepen. Met als 2 taken om een groep te joinen:
 1. Luister op het laag 2 adres die het IP multicast group mapt.
