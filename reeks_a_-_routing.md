@@ -23,7 +23,7 @@ Bij routing hebben we verschillende termen:
 |Routingtabel|Houdt bij aan welke volgende router de huidige router het bericht best afgeeft|
 |Forwarding address|Volgende router|
 |Netwerkadres|Unieke identificatie|
-|metriek|Kost om eindbestemming te bereiken (meestal hop afstand), als men via het Type Of Service veld een berekeningswijze selecteert dan spreekt men van TOS Routing|
+|metriek|Kost om eindbestemming te bereiken (meestal hop afstand).<br />Als men via het Type Of Service veld een berekeningswijze selecteert dan spreekt men van TOS Routing|
 |lifetime|Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (voral bij automatische routingtabellen)|
 
 <p style="page-break-after:always;"></p>
