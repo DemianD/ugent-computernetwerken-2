@@ -107,15 +107,9 @@ IGMP biedt een manier voor computers om hun interesse om tot een multicast groep
 
 Multicasting staat 1 computer toe om berichten te sturen naar andere computers die interesse tonen.
 
+IGMP wordt gebruikt om dynamische individuele hosts aan een multicast groep toe te voegen. Hosts indentificeren computers die interesse hebben, door deze IGMP berichten naar hun lokale multicast router te laten sturen.
 
-
-
-Een host gaat IGMP gebruiken om hun interesse te tonen in specifieke multicast groepen. Met als 2 taken om een groep te joinen:
-1. Luister op het laag 2 adres die het IP multicast group mapt.
-2. Toon interesse om de groep te joinen.
-
-Om de status te verversen gaat men regelmatig IGMP Host Mempership Query Messages sturen. Deze sturen Report messages terug voor elke groep waar ze in geinteresseerd zijn.
-
+Routers luisteren naar IGMP berichten en zenden periodiek berichten uit om te ontdekken welke groepen er actief zijn en welke inactief zijn op een specifiek subnet.
 
 Er zijn 3 verschillende versies van IGMP:
 
