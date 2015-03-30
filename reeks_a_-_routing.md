@@ -24,7 +24,7 @@ Bij routing hebben we verschillende termen:
 |Forwarding address|Volgende router|
 |Netwerkadres|Unieke identificatie|
 |metriek|Kost om eindbestemming te bereiken (meestal hop afstand).<br />Als men via het Type Of Service veld een berekeningswijze selecteert dan spreekt men van TOS Routing|
-|lifetime|Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (vooral bij automatische routingtabellen)|
+|lifetime|Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (voobadral bij automatische routingtabellen)|
 
 <p style="page-break-after:always;"></p>
 #### Problemen
@@ -56,7 +56,7 @@ Bij routing hebben we verschillende termen:
 |Goed voor alle topologieen|Moeilijker in het begin|
 |Niet afhankelijk van netwerkgrootte|Minder veilig door broadcast en multicast routing updates. (heeft passieve interfaces en authenticatie nodig voor betere beveiliging)|
 |Automatische aanpassingen om verkeer om te leiden|Route hangt af van huidige topologie|
-||Meer CPU, RAM en badnwith nodig|
+||Meer CPU, RAM en bandwith nodig|
 
 <p style="page-break-after:always;"></p>
 ### 2.4 Maak een classificatie van routingprotocollen, volgens 2 criteria. Omschrijf de terminologie die je hierbij invoert. Geef ondermeer aan op welk niveau hetzelfde routingprotocol actief kan zijn, en hoe aan schaalbeperking kan worden gedaan. Geef van elke klasse de meest courante vertegenwoordigers. Het is niet de bedoeling in te gaan op een gedetailleerde vergelijking tussen de verschillende klassen en hun specifieke vertegenwoordigers.
