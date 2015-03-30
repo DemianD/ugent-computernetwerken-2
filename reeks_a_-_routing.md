@@ -69,7 +69,7 @@ Wisselt routing informatie uit tussen gateways binnen eenzelfde autonoom systeem
 * Open Shortest Path First Protocol (OSPF)
 * Intermediate System to System Protocol (IS-IS)
 
-##### Exterior Gateway Protocollen / Inter-domein protocollen
+##### Exterior Gateway Protocollen (EGP) / Inter-domein protocollen
 Wisselt routing informatie uit tussen verschillende autonome systemen, waardoor er ook verkeer tussen die systemen mogelijk is. Dit is echter enkel voor de Border Routers van dit Autonoom Systeem.
 
 * Exterior Gateway Protocol (EGP)
