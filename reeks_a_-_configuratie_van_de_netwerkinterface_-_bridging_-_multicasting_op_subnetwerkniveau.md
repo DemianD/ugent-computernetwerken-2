@@ -101,7 +101,10 @@ Volgens RFC1112 is vastgelegd dat als het IP Multicast Datagram zijn TTL groter 
 elk multicast adres valt in de D range van IPv4 (224.0.0.0 -> 239.255.255.255), deze hebben geen subnetmask. Dit omdat men elk adress apart behandelt.
 
 #### Gebruikte protocol
-Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol, er zijn 3 verschillende versies van IGMP.
+Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol.
+
+
+Er zijn 3 verschillende versies van IGMP:
 
 * IGMPv1
     * Stuurt report berichten naar het groepadres dat bereikt moet worden. (adres is dat van het doel adres)
@@ -111,10 +114,3 @@ Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol
     * Stuurt een Leave-Group bericht als deze stopt.
 * IGMPv3
     * Dezelfde als ICMPv1 en ICMPv2 enkel kan men nu aangeven of men pakketten wil ontvangen of filteren van specifieke adressen. (Adres is het multicast adres: 224.0.0.22)
-
-Een host gaat IGMP gebruiken om hun interesse te tonen in specifieke multicast groepen. Met als 2 taken om een groep te joinen:
-1. Luister op het laag 2 adres die het IP multicast group mapt.
-2. Toon interesse om de groep te joinen.
-
-Om de status te verversen gaat men regelmatig IGMP Host Mempership Query Messages sturen. Deze sturen Report messages terug voor elke groep waar ze in geinteresseerd zijn.
-
