@@ -103,6 +103,19 @@ elk multicast adres valt in de D range van IPv4 (224.0.0.0 -> 239.255.255.255), 
 #### Gebruikte protocol
 Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol.
 
+IGMP biedt een manier voor computers om hun interesse om tot een multicast groep van naburige routers te behoren te tonen.
+
+Multicasting staat 1 computer toe om berichten te sturen naar andere computers die interesse tonen.
+
+
+
+
+Een host gaat IGMP gebruiken om hun interesse te tonen in specifieke multicast groepen. Met als 2 taken om een groep te joinen:
+1. Luister op het laag 2 adres die het IP multicast group mapt.
+2. Toon interesse om de groep te joinen.
+
+Om de status te verversen gaat men regelmatig IGMP Host Mempership Query Messages sturen. Deze sturen Report messages terug voor elke groep waar ze in geinteresseerd zijn.
+
 
 Er zijn 3 verschillende versies van IGMP:
 
