@@ -44,7 +44,7 @@ We hebben in het labo het Spanning Tree Protocol algoritme gebruikt, dit voorkom
 
 1. Selecteer root bridge (Dit is de bridge met de kleinste bridge ID, bridge priority (2 bytes) + MAC (6 bytes), we kunnen nieuwe bridge laten kiezen door prioriteit te veranderen, dit moet wel in meervouden van 4096!).
 2. Vind laagste kost pad voor de root bridge (We kennen kostprijs toe en laten elke bridge de som maken van de andere bridges tot die root bridge, de goedkoopste poort noemt men de designated root. Ook wordt er een designated port geselecteerd, deze wordt gebruikt om de root bridge te bereiken.) 
-3. Deactiveer alle andere poorten die geen designated port zijn of root port.
+3. Blokkeer alle andere poorten die geen designated port zijn of root port.
 4. Breek gelijkheden op.
 
 <p style="page-break-after:always;"></p>
