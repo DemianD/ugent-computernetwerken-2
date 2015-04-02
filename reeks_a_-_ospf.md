@@ -35,7 +35,7 @@
             * Aan de hand van ontvangen Hello pakketten van andere routers vult de router zijn lijst met naburige buren in.
             * OSPF gaat uit van transitiviteit: beschouwt routers vermeld in Hello pakketten als rechtstreekse buren.
     2. Fase 2: Database Exchange Proces
-        *  Elk koppel routers vormt master/slave verhouding, en wisselt Database Description pakketten uit (Beschrijven LSA's met lolly nummer die zich momenteel in deLSDB van een router bevindt.).
+        *  Elk koppel routers vormt master/slave verhouding, en wisselt Database Description pakketten uit (Beschrijven LSA's met lolly nummer die zich momenteel in de LSDB van een router bevindt.).
         *  Men kan nu detecteren of de router zijn LSDB verouderde informatie bevat.
             * Als verouderd, vraag Link met Link State Request, State Update pakketten op.
         * Adjacency is gevormd als alle koppels alle Link State Request en Link State Update pakketten hebben uitgewisseld en bevestigd. de LSDB wordt enkel uitgewisseld bij topologie wijziging.
