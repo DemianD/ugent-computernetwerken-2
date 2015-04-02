@@ -17,7 +17,7 @@ RIP berichten worden ingekapseld in UDP segmenten met poortnummers 520. Deze pak
 * Alle mogelijke paden dienen worden opgeslagen in de routetabbellen.
 * Trage convergentie:
     * De meeste implementaties van RIP houden enkel de route met de kleinste metriek bij, de metriek wordt wel verhoogt als een melding van de eerste intermediaire hop ontvangen wordt.
-    * De liftetime parameter van via RIP aangeleerde routes wordt standaard ingesteld op 3 minuten, wat 6 keer de default periode is. Dit om pakketten verlies tegen te gaan.
+    * De liftetime parameter van via RIP aangeleerde routes wordt standaard ingesteld op 3 minuten, wat 6 keer de default periode is. Dit om verliest van pakketten tegen te gaan.
     * Er is een willekeur in het uitwisselingsproces omdat de routers hun berichten slechts periodiek advertern. Hierdoor is er een zeer trage update van de topologie.
 
 #### Problemen
