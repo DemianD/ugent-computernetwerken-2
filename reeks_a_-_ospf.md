@@ -6,7 +6,7 @@
     * Dit melden gebeurt door Link State advertisements (LSA's)
     * Deze worden naar alle routers van het gehele internetwerk gestuurd.
     * Enkel na heropstarten router of na wijziging in topologie.
-*  Doorstromen van informatie gebeurt sunchroon en ontvanger ontvangt een bevestiging. (OSPF  stuurt periodiek niet bevestigde pakketten op).
+*  Doorstromen van informatie gebeurt synchroon en ontvanger ontvangt een bevestiging. (OSPF  stuurt periodiek niet bevestigde pakketten op).
 *  Autonomous System Border Routers (ASBR)
     *  Routers aangesloten op subnetwerken die niet tot het routing domein behoren.
     *  Vermelden netwerken binnen het routing domein  en routes buiten het routing domein die via hen bereikbaar zijn (rechtstreeks en onrechtstreeks). 
