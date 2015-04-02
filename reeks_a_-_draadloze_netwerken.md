@@ -67,7 +67,7 @@
 #### Optimized Link State Routing : OLSR
 * LSA's router enkel doorgestuurd door beperkt aantal buren.
 * Minder overhead door meer selectieve flooding
-* Alle routes verwijzen naar een MPR als eerste hop naar de eindbestemming.
+* Alle routes verwijzen naar een MPR (Multi Point Relay) als eerste hop naar de eindbestemming.
 * MPR Criterium: Beperkte deelverzameling bidirectionele buren van router, zodanig dat alle 2-hop routers onmiddelijke buur zijn van 1 van de geselecteerde MPR's
 * Elke router meldt periodiek (hello) zijn buren, zodat elke router uiteindelijk ook de volledige topologie tot op afstand 2 kent --> MPR selectie
 * Selectieve flooding via MPR's leidt niet noodzakkelijk tot route met optimale metriek
