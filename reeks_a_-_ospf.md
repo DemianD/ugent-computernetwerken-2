@@ -33,7 +33,7 @@
             * Adjacencies worden dynamisch gevormd.
             * OSPF router stuurt tijdens initialisatie een Hello pakket (dit bevat eigen router ID als router IDs van naburige routers).
             * Aan de hand van ontvangen Hello pakketten van andere routers vult de router zijn lijst met naburige buren in.
-            * OSPF gaat uit van transitiviteit: beschouwt routers vermeld in Hell pakketten als rechtstreekse buren.
+            * OSPF gaat uit van transitiviteit: beschouwt routers vermeld in Hello pakketten als rechtstreekse buren.
     2. Fase 2: Database Exchange Proces
         *  Elk koppel routers vormt master/slave verhouding, en wisselt Database Description pakketten uit (Beschrijven LSA's met lolly nummer die zich momenteel in deLSDB van een router bevindt.).
         *  Men kan nu detecteren of de router zijn LSDB verouderde informatie bevat.
