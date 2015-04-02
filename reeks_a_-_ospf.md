@@ -64,7 +64,7 @@
     * Router 2 bevat LSA van alle routers behalve router 1.
 3. Router 1 vraagt in Link State Request aan router 2 om alle LSA's van de routers in het internetwerk en krijgt deze in Link State Update pakketten.
 4. Router 2 doet hetzelfde.
-5. Nu bevatten Router 1 en Router 2 gesynchroniseerde LSDB's en maken ze beide een nieuwe PSF tree. Hierna bereken ze de nieuwe routing tabel.
+5. Nu bevatten Router 1 en Router 2 gesynchroniseerde LSDB's en maken ze beide een nieuwe SPF tree. Hierna bereken ze de nieuwe routing tabel.
 6. Router 2 stuurt nu Link State Update naar alle andere routers vanwege router 1
 7. Nu kunnen de volgende routers hun routing tabel updaten, en verder sturen.
 
