@@ -49,7 +49,7 @@ De reductie van de convergentieperiode gaat de tijd verminderen die nodig is om 
 RIPv1 Broadcast berichten (maakt silent RIP mogelijk) waardoor er meer netwerkverkeer is. Bij RIPv2 wordt er optioneel naar het multicast adres 224.0.0.9 gestuurd wat het verkeer ten goede komt.
 
 #### Subnetmasker binnen route vectoren
-Omdat RIPv1 uitsluitend zelfidentificerende adressen gebruikte (A, B, C) en de prefixlengte (subnetmask) niet mee werdt opgenomen kon men supernetten op basis van opeenvolgende klasse-C niet bereiken. RIPv2 geeft het subnetmask meer waardoor dit wel kan.
+Omdat RIPv1 uitsluitend zelfidentificerende adressen gebruikte (A, B, C) en de prefixlengte (subnetmask) niet mee werdt opgenomen kon men supernetten op basis van opeenvolgende klasse-C niet bereiken. RIPv2 geeft het subnetmask mee waardoor dit wel kan.
 
 #### Next Hop veld
 RIPv1 geeft hier altijd 0 aan, RIPv2 gaat dit echter gebruiken om het adres van de eerste intermediaire hop aan te duiden. Zo kunnen routers kijken of de hop niet rechtstreeks te bereiken is en worden er dubbele hops vermeden.
