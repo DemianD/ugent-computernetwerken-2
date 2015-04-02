@@ -70,3 +70,11 @@
 
 ### 4.3. Hoe worden OSPF berichten verpakt (cfr. het OSI 7-lagen model)?
 OSPF pakketten zijn ingekapseld in IP-Datagrammen, er wordt echter gewacht op ontvangstbevestiging. Als een antwoord uitblijft dan wordt dit gezien als het falen van een verbinding.
+
+OSPF pakketten worden rechtstreeks over de netwerklaag verstuurd, daarom zijn deze enkel verpakt door IP en lokale datalink headers.
+
+OSPF specifieert geen manier om zijn protocol pakketten te fragmenteren en maakt gebruik van IP fragmentatie bij het versturen van pakketten die groter zijn dan de MTU van het netwerk. De grootte van een OSPF pakket kan 65,535 bytes zijn (IP header inclusief).
+
+Mogelijk grootte OSPF pakketten: Database Description Packets, Link State Request, Link State Update en Link State Acknowledgment pakketten. Deze worden meestal gesplitst in verschillende protocol pakketten.
+
+> http://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/116119-technote-ospf-mtu-00.html
