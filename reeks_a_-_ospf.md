@@ -4,7 +4,7 @@
 * OSPF is een interior, link state routing protocol.
 * Meldt enkel op welke subnetwerken hij rechtstreeks toegang heeft.
     * Dit melden gebeurt door Link State advertisements (LSA's)
-    * Deze worden alle routers van het gehele internetwerk gestuurd.
+    * Deze worden naar alle routers van het gehele internetwerk gestuurd.
     * Enkel na heropstarten router of na wijziging in topologie.
 *  Doorstromen van informatie gebeurt sunchroon en ontvanger ontvangt een bevestiging. (OSPF  stuurt periodiek niet bevestigde pakketten op).
 *  Autonomous System Border Routers (ASBR)
