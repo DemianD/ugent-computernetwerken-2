@@ -1,4 +1,4 @@
-# ugent-computernetwerken-2
+ # ugent-computernetwerken-2
 ## Introductie
 Hier vind U de samenvatting voor het vak Computernetwerken 2, dit is een zeer uitgebreide samenvatting die opgesteld is aan de hand van de gegeven reeksen die we moesten kennen voor het examen.
 
