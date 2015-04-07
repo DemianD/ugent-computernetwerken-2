@@ -107,7 +107,7 @@ Het gebruikte protocol is IGMP wat staat voor Internet Group Management Protocol
 
 IGMP biedt een manier voor computers om hun interesse om tot een multicast groep van naburige routers te behoren te tonen.
 
-Multicasting staat 1 computer toe om berichten te sturen naar andere computers die interesse tonen.
+Multicasting staat 1 computer toe om berichten te sturen naar andere computers die interesse tonen. 
 
 IGMP wordt gebruikt om dynamische individuele hosts aan een multicast groep toe te voegen. Hosts indentificeren computers die interesse hebben, door deze IGMP berichten naar hun lokale multicast router te laten sturen.
 
