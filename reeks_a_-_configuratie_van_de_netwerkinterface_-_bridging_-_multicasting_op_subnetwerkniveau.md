@@ -2,7 +2,7 @@
 ### 1.1. Bespreek alle (ook meer recente) opdrachten, inclusief hun opties en output, die onder Linux voor de configuratie van de netwerkinterface kunnen gebruikt worden, zowel op de subnetwerklaag als op de internetlaag. Behandel eveneens eventuele configuratiebestanden (inclusief locatie en inhoud). Vergeet in het bijzonder de opstartbestanden niet.
 
 #### Commando's en hun werking
-|Commando|Werking|
+|Commando|Werking| 
 |--------|-------|
 |`system-config-network`|Fedora netwerk configurator GUI|
 |`dmesg` of `/var/log/dmesg`|Toont naam, type, mac adres, interrupt, I/O poort, ... van de gedetecteerde netwerkkaarten bij boot. Auto probing gaat ervoor zorgen dat deze automatisch gedetecteerd en geconfigureerd worden.|
