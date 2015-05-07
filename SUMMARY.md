@@ -11,4 +11,5 @@
 * Reeks B - Configuratie van DNS servers onder Linux Deel 2
 * Reeks B - Configuratie van DNS servers onder Linux Deel 3
 * Reeks B - Configuratie van DNS servers onder Linux Deel 4
+* SNMP Labo
 
