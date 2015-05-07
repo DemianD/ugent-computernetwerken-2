@@ -30,6 +30,7 @@
 |Context-specific|InformRequest|1010 0110|A6H|
 |Context-specific|SNMPv2Trap|1010 0111|A7H|
 
+<p style="page-break-after:always;"></p>
 ## Length
 * Lengte van het waardeveld
 * Als > 128 dan 1n|xxxxxxxx|xxxxxxxx|... (n = aantal bytes)
@@ -55,6 +56,7 @@ Vb:
 ## Diagram
 ![diagram](https://lh3.googleusercontent.com/ejMj28QGT4M0SL22vXRaYjIsgOWBtmInmWs0H2x51V4=s1000 "snmp_diagram.png")
 
+<p style="page-break-after:always;"></p>
 ## SNMP Message : GetRequest 
 ### Definitie
 	GetRequestMessage ::= SEQUENCE {
@@ -109,13 +111,15 @@ Vb:
 									06 0c 2b 06 01 04 01 82 37 01 03 01 06 00 (OID Lengte 12 "1.3.6.1.4.1.311.1.3.1.6")
 									05 00 (NULL lengte 0 (Waarde object niet gekend))
 
+<p style="page-break-after:always;"></p>
 ### Voorbeeld 3 (Lengte > 128)
 04 81 ea a z e r t y . . . w x c v d n
 
 04 = Octet String
 81 = 1000 0001 wat n = 1 geeft en dus 1 byte geeft als lengte (MSB is altijd 1)
 EA = 234
-									
+
+### Opmerkingen									
 > * **2b** in varBind is 1.3 !!!
 > * Eerste 2 bytes worden samen geëncodeerd.
 > * Als >= 128, dan component in 7 laagste bits van 2 bytes.
@@ -161,6 +165,7 @@ EA = 234
 		}
 	}
 
+<p style="page-break-after:always;"></p>
 ## Commando's
 ```bash
 net hexdump -c bestand # Print bestand
