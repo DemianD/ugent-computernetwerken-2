@@ -111,7 +111,6 @@ Vb:
 									06 0c 2b 06 01 04 01 82 37 01 03 01 06 00 (OID Lengte 12 "1.3.6.1.4.1.311.1.3.1.6")
 									05 00 (NULL lengte 0 (Waarde object niet gekend))
 
-<p style="page-break-after:always;"></p>
 ### Voorbeeld 3 (Lengte > 128)
 04 81 ea a z e r t y . . . w x c v d n
 
