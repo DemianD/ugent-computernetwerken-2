@@ -9,10 +9,21 @@
 * De data die vloeit van host naar receiver = downstream (via outbound of outgoing interface), van receiver naar host = upstream (via incoming of inbound interface).
 * Incoming interface wordt ook IIF genoemd, outgoing interface de OIL.
 * Forwarding state wordt bijgehouden in **(S,G)** en **(*,G)** (S = unicast IP, G = specifiek multicast group IP adress)
+* Reverse path forwarding om lus vrije forwarding van multicast pakketten te garanderen, dit door hulp van Reverse Path Forwarding en Shortest Path trees of Rendezvous Point Trees.
 
 ## 2. Omschrijf de 2 fundamenteel verschillende manieren om deze basisprincipes te realiseren, inclusief hun relatieve voor- en nadelen.
-* 
+### 2.1. Dense Protocols
+* Gaan uit van dichte verdeling en elk subnet minstens 1 geinteresseerde listener heeft.
+* Volgt flood-and-prune model. 
+    * Broadcast traffic door domein
+    * Bij ontvangen traffic op interface dichtst bij bron gaat router dit forwraden op alle andere interfaces.
 
+Voordelen
+* Bij weinig of geen prunes is dit efficienter dan sparse protocols.
+* 
+Nadelen
+* Niet geschikt bij netwerken met veel prunes
+### 2.2. Sparse Protocols
 
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 PIM-SM
