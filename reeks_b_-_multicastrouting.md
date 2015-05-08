@@ -33,7 +33,11 @@
 * PIM-DM
 
 ### 2.2. Sparse Protocols
-* 
+* Gebruikt veronderstelling dat een sparse verdeling van subnetten met minstens 1 geinteresserde ontvanger bestaat. (meer consistent met wat er op het internet bestaat).
+* Gaat een core node aanduiden die alle actieve sources in een domein gaat tracken.
+* Sparse protocols volgen een explicit join model. Dit forward data enkel naar routers die het opvragen.
+* Deze core node (of rendezvous point (RP)) kan traffic ontvangen van de bron via SPT.
+* Als een host een groep wilt joinen, dan gaan de rechstreekse verbonden routers de distributie boom joinen richting de RP. Traffic wordt ontvangen door de RP over de SPT en geforward naar geinteresseerde ontvangers via het Rendezvous punt.
 
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 PIM-SM
