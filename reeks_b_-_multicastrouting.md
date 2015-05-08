@@ -11,9 +11,11 @@
 * Forwarding state wordt bijgehouden in **(S,G)** en **(*,G)** (S = unicast IP, G = specifiek multicast group IP adress)
 
 ## 2. Omschrijf de 2 fundamenteel verschillende manieren om deze basisprincipes te realiseren, inclusief hun relatieve voor- en nadelen.
+* 
 
 
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
+PIM-SM
 ## 4. Omschrijf de optionele technieken om de werking van dit protocol nog meer te optimaliseren.
 ## 5. Hoe kan men een Linux toestel als multicastrouter laten werken? Geef 2 concrete voorbeelden. Geef aan hoe men de diverse multicastverkeerstromen kan opvolgen.
 Kernel flags aanzetten:
