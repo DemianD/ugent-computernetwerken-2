@@ -1,5 +1,15 @@
 # Reeks B - Multicastrouting
 ## 1. Geef de basisprincipes van multicastrouting
+* Gebruikt klasse D range (224.0.0.0 - 239.255.255.255)
+* Heeft geen mask lengte voor forwarding doeleinden (mask is standaard /32).
+* multicast address is group address.
+* group member toont interesse voor pakketten te ontvangen verstuurd aan specifieke adressen. (receiver of listener)
+* host verstuurt deze pakketten.
+* Meerdere ontvangers mogelijk, dit is dus een tak van een boom = distribution tree.
+* De data die vloeit van host naar receiver = downstream (via outbound of outgoing interface), van receiver naar host = upstream (via incoming of inbound interface).
+* Incoming interface wordt ook IIF genoemd, outgoing interface de OIL.
+* Forwarding state wordt bijgehouden in **(S,G)** en **(*,G)** (S = unicast IP, G = specifiek multicast group IP adress)
+
 ## 2. Omschrijf de 2 fundamenteel verschillende manieren om deze basisprincipes te realiseren, inclusief hun relatieve voor- en nadelen.
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 ## 4. Omschrijf de optionele technieken om de werking van dit protocol nog meer te optimaliseren.
