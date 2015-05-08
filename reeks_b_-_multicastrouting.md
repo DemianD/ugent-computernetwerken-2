@@ -39,6 +39,17 @@
 * Deze core node (of rendezvous point (RP)) kan traffic ontvangen van de bron via SPT.
 * Als een host een groep wilt joinen, dan gaan de rechstreekse verbonden routers de distributie boom joinen richting de RP. Traffic wordt ontvangen door de RP over de SPT en geforward naar geinteresseerde ontvangers via het Rendezvous punt.
 
+**Voordelen**
+* Vermindert aantal statussen vereist.
+* Vereist geen flooding
+* Het RP is de enige router dat op de hoogte moet zijn van alle actieve bronnen in het domein.
+
+**Nadelen**
+* Introduceert potentieel voor suboptimal routing.
+    * Multicast data gaat eerst door het RP en dan de ontvanger. Ook al is de ontvanger dichter bij de bron.
+    * Om dit tegen te gaan gaat PIM-SM toestaan dat de ontvanger zijn DR gaat joinen richting de bron volgens het SPT als het verkeer een bepaalde waarde wordt.
+
+**Voorbeelden**
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 PIM-SM
 ## 4. Omschrijf de optionele technieken om de werking van dit protocol nog meer te optimaliseren.
