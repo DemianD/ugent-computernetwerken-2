@@ -16,14 +16,24 @@
 * Gaan uit van dichte verdeling en elk subnet minstens 1 geinteresseerde listener heeft.
 * Volgt flood-and-prune model. 
     * Broadcast traffic door domein
-    * Bij ontvangen traffic op interface dichtst bij bron gaat router dit forwraden op alle andere interfaces.
+    * Bij ontvangen traffic op interface dichtst bij bron gaat router dit forwarden op alle andere interfaces.
+    * Als traffic op niet RPF interface dan discard en zend prune bericht naar de upstream.
 
-Voordelen
+**Voordelen**
 * Bij weinig of geen prunes is dit efficienter dan sparse protocols.
-* 
-Nadelen
+* Eenvoud, laat toe om makkelijk multicast verdeel boom rooted aan de bron te maken.
+* Een bron gebaseerde boom garandeerd het kortste en efficientste pad van bron naar ontvanger.
+
+**Nadelen**
 * Niet geschikt bij netwerken met veel prunes
+* Schaalbaarheid (door het flooden)
+
+**Voorbeelden**
+* DVMRP
+* PIM-DM
+
 ### 2.2. Sparse Protocols
+* 
 
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 PIM-SM
