@@ -9,7 +9,7 @@
 * [Reeks B - Multicastrouting](reeks_b_-_multicastrouting.md)
 * [Reeks B - Configuratie van DNS servers onder Linux](reeks_b_-_configuratie_van_dns_servers_onder_linux.md)
 * [Reeks B - Configuratie van DNS servers onder Linux Deel 2](reeks_b_-_configuratie_van_dns_servers_onder_linux_deel_2.md)
-* Reeks B - Configuratie van DNS servers onder Linux Deel 3
+* [Reeks B - Configuratie van DNS servers onder Linux Deel 3](reeks_b_-_configuratie_van_dns_servers_onder_linux_deel_3.md)
 * Reeks B - Configuratie van DNS servers onder Linux Deel 4
 * [SNMP Labo](snmp_labo.md)
 
