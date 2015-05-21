@@ -13,8 +13,8 @@
 * [Reeks B - Configuratie van reverse DNS onder Linux](reeks_b_-_configuratie_van_reverse_dns_onder_linux.md)
 * [Reek C - DHCP leaseprocessen en relay-agents](reek_c_-_dhcp_leaseprocessen_en_relay-agents.md)
 * [Reek C - IPv6 Adressering](reek_c_-_ipv6_adressering.md)
-* Reek C - IPv6 berichtstructuur
-* Reek C - Overgang naar IPv6 en autoconfiguratie
+* [Reek C - IPv6 berichtstructuur](reek_c_-_ipv6_berichtstructuur.md)
+* [Reek C - Overgang naar IPv6 en autoconfiguratie](reek_c_-_overgang_naar_ipv6_en_autoconfiguratie.md)
 * Reek C - IPv6 Tunneling
 * [SNMP Labo](snmp_labo.md)
 
