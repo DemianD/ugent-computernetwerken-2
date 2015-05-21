@@ -14,7 +14,7 @@
 * Reek C - DHCP leaseprocessen en relay-agents
 * Reek C - IPv6 Adressering
 * Reek C - IPv6 berichtstructuur
-* [SNMP Labo](snmp_labo.md)
 * Reek C - Overgang naar IPv6 en autoconfiguratie
+* [SNMP Labo](snmp_labo.md)
 * Reek C - IPv6 Tunneling
 
