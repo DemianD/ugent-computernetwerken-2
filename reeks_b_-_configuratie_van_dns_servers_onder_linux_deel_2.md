@@ -20,4 +20,19 @@ De figuur in bijlage stelt een intranet bestaand uit een aantal Linux ...(cfr.vr
     corelli.sonatas.XVII.it     IN  A   192.168.16.126  ; IP Of name server
     carissimi                   IN  A   192.168.16.60   ; A-record carissimi.oratoria.XVII.it
 
+* Elke zone file heeft SOA (Start of authority) record
+    * Bevat prim dns nameserver
+    * verantwoordelijke zijn email (geen @ maar . in de plaats!)
+    * serial, refresh, retry, expire en minimum tijd
+* Ook hebben we de Name server die dit domein beheert (NS)
+* IN staat voor Internet
+* Verschillende type records: 
+    * A (point naam naar IP)
+    * PTR (Point IP naar naam, vb: `166.227.79.212.in-addr.arpa 86400 IN PTR mail.qdc.nl`)
+    * MX (Point mailserver naar IP)
+    * SOA (Begin van host file)
+    * NS (Nameserver)
+    * CNAME (Alias voor dns naam, vb: `mail IN CNAME gonzo`)
+        * beter om A records te gebruiken
+
 ## Stel het configuratiebestand en alle zonebestanden op van volgende DNS servers: ... . Gebruik relatieve DNS namen waar mogelijk. Gebruik noch forwarders, noch de $ORIGIN opdracht !
