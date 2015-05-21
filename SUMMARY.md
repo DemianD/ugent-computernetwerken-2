@@ -14,4 +14,5 @@
 * [SNMP Labo](snmp_labo.md)
 * Reek C - DHCP leaseprocessen en relay-agents
 * Reek C - IPv6 Adressering
+* Reek C - IPv6 berichtstructuur
 
