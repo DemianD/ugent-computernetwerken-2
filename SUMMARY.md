@@ -12,4 +12,5 @@
 * [Reeks B - Configuratie van DNS servers onder Linux Deel 3](reeks_b_-_configuratie_van_dns_servers_onder_linux_deel_3.md)
 * [Reeks B - Configuratie van reverse DNS onder Linux](reeks_b_-_configuratie_van_reverse_dns_onder_linux.md)
 * [SNMP Labo](snmp_labo.md)
+* Reek C - DHCP leaseprocessen en relay-agents
 
