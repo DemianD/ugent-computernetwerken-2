@@ -13,4 +13,5 @@
 * [Reeks B - Configuratie van reverse DNS onder Linux](reeks_b_-_configuratie_van_reverse_dns_onder_linux.md)
 * [SNMP Labo](snmp_labo.md)
 * Reek C - DHCP leaseprocessen en relay-agents
+* Reek C - IPv6 Adressering
 
