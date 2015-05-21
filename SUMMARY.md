@@ -16,4 +16,5 @@
 * Reek C - IPv6 Adressering
 * Reek C - IPv6 berichtstructuur
 * Reek C - Overgang naar IPv6 en autoconfiguratie
+* Reek C - IPv6 Tunneling
 
