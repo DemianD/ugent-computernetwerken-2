@@ -118,8 +118,7 @@ Maak zonebestanden aan per DNS server:
     corelli.sonatas.XVII.it     IN  A   192.168.16.126  ; IP Of name server
     carissimi                   IN  A   192.168.16.60   ; A-record carissimi.oratoria.XVII.it
 
-
-
+<p style="page-break-after:always;"></p>
 ## Bespreek in detail het begrip secundaire nameserver, inclusief voordelen, beperkingen en problemen. (§3.1 & §3.3.3) 
 Secundaire nameservers houden dezelfde informatie bij als primaire
 
