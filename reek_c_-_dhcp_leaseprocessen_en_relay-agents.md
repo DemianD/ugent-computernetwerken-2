@@ -30,6 +30,7 @@ We duiden het type aan met de optie 53
     * Vraagt aanvullende opties aan de server
         * Zoals DHCP Discovery optie 55 
 
+<p style="page-break-after:always;"></p>
 ## Bespreek in detail de opeenvolgende stappen van beide DHCP leaseprocessen.
 * **Initialisatie**
     * Client broadcast een DHCP discovery bericht
@@ -60,6 +61,7 @@ We duiden het type aan met de optie 53
             * Client stopt met lease te gebruiken.
             * Herstart initialisatieproces.
 
+<p style="page-break-after:always;"></p>
 ## Bespreek het doel en (in detail) de werking van DHCP relay-agents. Welke velden in DHCP berichten helpen deze functie realiseren ?
 ### Doel
 * DHCP maakt gebruik van broadcast en zal dus enkel werken op een enkel subnet
