@@ -49,6 +49,7 @@ De figuur in bijlage stelt een intranet bestaand uit een aantal Linux ...(cfr.vr
     include "/etc/rndc.key";
     include "/etc/named.rfc1912.zones";
 
+<p style="page-break-after:always;"></p>
 * Named gebruikt named.conf (/etc/named.conf)
 * Bevat basisinstellingen voor de serverdaemon te configureren
 * Vermeldt ook de namen van de zonebestanden
