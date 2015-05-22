@@ -22,6 +22,7 @@
     * Langs de kant van de ontvanger is de tunnel steeds suboptimaal (tunnel aangelegd tot eindbestemming).
 * het eindpunt moet steeds IPv4 compatibel zijn, waardoor er geen gebruik kan gemaakt worden van de volle 128-bits adresruimte. (Dus enkel toepasbaar op kleine netwerkomgevingen)
 
+<p style="page-break-after:always;"></p>
 ### Geconfigureerde IPv6 over IPv4 tunneling
 * Hierbij worden routers zo geconfigureerd om IPv6 pakketten die over een IPv4 netwerk moeten, via een expliciet geconfigureerde tunnel te sturen.
 * Deze tunnel manifesteert zich dikwijls als een aparte interface, waarbij het eindpunt steeds vastligt.
