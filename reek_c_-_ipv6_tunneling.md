@@ -44,6 +44,7 @@
     * De relay router zal vervolgens de 6to4 IPv4 header strippen, om tenslitte het IPv6 datagram correct door te sturen.
 * Het gorte nadeel aan deze tunnelingtechniek is dat de routingtabellen hun huidige grootte behouden, en een global hernummering zal nodig zijn om een reguliere IPv6 adresseringsschema te bekomen.
 
+<p style="page-break-after:always;"></p>
 ### Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) tunneling
 * Dit mechanisme is gelijkaardig aan 6to4, maar biedt een oplossning voor tunneling tussen 2 subnetten van eenzelfde private netwerkinfrastructuur (verschillende IPv6 eilanden binnen eenzelfde site)
     * 6to4 faalt hierbij, aangezien beide subnetten dezelfde 6to4 prefix kennen en dus rechtstreeks met elkaar zouden moeten kunnen communiceren, zonder gebruik van een tunnel.
