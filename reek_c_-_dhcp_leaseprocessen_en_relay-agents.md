@@ -92,6 +92,7 @@ We duiden het type aan met de optie 53
     * Linux: file `/var/lib/dhcp/dhclient.leases`
     * Windows: `hive register`
 
+<p style="page-break-after:always;"></p>
 ## Beschrijf wat er gebeurt indien een Windows Server of Linux DHCP-cliënt in eerste instantie geen DHCP-server kan bereiken.
 * Linux en Windows DHCP clients kunnen zichzelf configureren om met een tijdelijke IP-configuratie te werken
 * = Automatic Private IP Addressing (APIPA) (of automatische IP Configuratie)
