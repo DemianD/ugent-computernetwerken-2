@@ -35,6 +35,7 @@
 * DVMRP
 * PIM-DM
 
+<p style="page-break-after:always;"></p>
 ### 2.2. Sparse Protocols
 * Gebruikt veronderstelling dat een sparse verdeling van subnetten met minstens 1 geinteresserde ontvanger bestaat. (meer consistent met wat er op het internet bestaat).
 * Gaat een core node aanduiden die alle actieve sources in een domein gaat tracken.
@@ -55,6 +56,7 @@
 **Voorbeelden**
 * PIM-SM
 
+<p style="page-break-after:always;"></p>
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
 * 2 Versies
     * Versie 1: Gebruikt IGMP berichten. IGMP versie = 1, IGMP type = 4 (router PIM berichten)
@@ -103,6 +105,7 @@
 * Anycast RP vormt meerdere PIM-SM domeinen met elk subdomein bestaande uit een RP.
 * Anycast adres is meestal secundair adres om problemen met dubbele router ids te voorkomen.
 
+<p style="page-break-after:always;"></p>
 ### 4.3. PIM Register Message Processing
 * Als PIM-SM DR een multicast pakket ontvangt, dan DR encapsuleert dit pakket in een Register bericht en zend het als een unicast pakket naar het RP voor de groep.
 * Dit bericht heeft bron (s) en groep adres (G). antwoord is gebaseerd op 2 factoren:
@@ -122,7 +125,7 @@
 * Word verzonden bij opstart of eerste configuratie voor PIM.
 * Dit bericht houd geconfigureerde DR prioriteit bij.
 
-
+<p style="page-break-after:always;"></p>
 ## 5. Hoe kan men een Linux toestel als multicastrouter laten werken? Geef 2 concrete voorbeelden. Geef aan hoe men de diverse multicastverkeerstromen kan opvolgen.
 Kernel flags aanzetten:
 * IPv4: 
@@ -153,7 +156,7 @@ Monitoren PIM-SM:
     show pim interface adres
     show pim join
 
-
+<p style="page-break-after:always;"></p>
 ## 6. Sommige routers verzorgen in het multicastproces bijzondere rollen, die ze pas na specifieke verkiezingsprocessen toebedeeld krijgen. Geef een overzicht van deze bijzondere functies, en de overeenkomstige verkiezingsprocessen.
 * **Active Querier:**
     * Verstuur Active querier Internet Group Management Protocol Query berichten met IP TTL van 1
