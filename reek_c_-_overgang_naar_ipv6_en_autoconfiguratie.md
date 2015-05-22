@@ -49,6 +49,7 @@ Om de overgang eenvoudig te realiseren wordt gebruikt gemaakt van volgende techn
     * IPv6/IPv4 routers zetten IPv4 headers om in een IPv6 header
     * Dit met behulp van de IPv4 gemapte adressen.
 
+<p style="page-break-after:always;"></p>
 ## Geef de alternatieve mogelijkheden voor autoconfiguratie in IPv6. Bespreek hierbij de opeenvolgende stappen. (§5.6)
 ### Identificatie Begrippen
 * Tentatief
