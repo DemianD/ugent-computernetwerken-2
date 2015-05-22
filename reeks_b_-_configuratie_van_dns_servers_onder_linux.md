@@ -2,9 +2,8 @@
 De figuur in bijlage stelt een intranet bestaand uit een aantal Linux computers voor, met corresponderend IP-adres, van de vorm 192.168.16.z . Het getal z lees je af links van de naam van de computer. De getallen rechts van de naam van de computer moet je negeren. De computers staan gegroepeerd in een tabel met als header de naam van het domein waarin ze zich bevinden. De rechthoeken die domeinen groeperen stellen dan weer een zone voor. Stippellijnen duiden op een domein/sub­domein relatie. De pijlen laten toe om de primaire name­server van elke zone te achterhalen. Je hoeft geen reverse DNS te configureren.
 
 ## Stel het configuratiebestand en alle zonebestanden op van volgende DNS servers, waarbij je er rekening moet mee houden dat elk van deze servers ook secundaire nameserver is voor alle zones van de andere server: ... . Gebruik relatieve DNS namen waar mogelijk. Gebruik noch forwarders, noch de $ORIGIN opdracht !
-Figuur gegeven op examen
+**Voorbeeld:**
 
-### Voorbeeld
 Maak zonebestanden aan per DNS server:
 
 **named.conf**
