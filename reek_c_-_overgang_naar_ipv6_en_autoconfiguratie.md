@@ -17,6 +17,7 @@
     * IPv4 kent geen mogelijkheden voor mobiliteit
     * De configuratie van IPv4 is steeds statisch.
 
+<p style="page-break-after:always;"></p>
 ## Hoe zal deze overgang worden gerealizeerd ? Van welke technieken zal men gebruik maken ? Je moet hierbij onder andere tunneling in algemene termen beschrijven, echter zonder dieper in te gaan op de praktische uitwerking ervan. (§5.7 zonder subsecties)
 ### Aanpassingen
 * Op subnetwerkniveau enkel verwijzing naar hogere protocollaag aanpassen (ethernet frames)
