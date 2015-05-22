@@ -33,6 +33,7 @@ Alle extensieheaders (behalve encapsulating security payload) volgen dezelfde st
 
 Deze headers komen voor in een vastgelegde volgorde.
 
+<p style="page-break-after:always;"></p>
 ### Soorten
 * Hop-by-Hop options
     * Verzamelt alle opties die ook door tussenliggende routers verwerkt dienen te worden
