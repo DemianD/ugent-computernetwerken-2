@@ -35,7 +35,7 @@ Deze headers komen voor in een vastgelegde volgorde.
 
 <p style="page-break-after:always;"></p>
 ### Soorten
-*** Hop-by-Hop options**
+* **Hop-by-Hop options**
     * Verzamelt alle opties die ook door tussenliggende routers verwerkt dienen te worden
     * Komt onmiddelijk na de IPv6 header en is TLV geencodeerd.
     * Jumbo payload optie (type 194), maakt afhandelen datagrammen > 65535 bytes mogelijk
