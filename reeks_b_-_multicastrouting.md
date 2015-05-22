@@ -87,9 +87,8 @@
         * Client stuurt prune bericht naar traagste
         * Client ontvangt 1 exemplaar en dan is het optimale pad gerealiseerd.
 
+<p style="page-break-after:always;"></p>
 ## 4. Omschrijf de optionele technieken om de werking van dit protocol nog meer te optimaliseren.
-
-
 ### 4.1. Group-to-RP Mapping
 * PIM-SM vereist dat alle routers het actieve RP (rendezvous point) kennen.
 * Groep van PIM-SM zenders connecteren fysisch met/of tunnels die dezelfde RP-to-group mapping matrix overeenkomen.
@@ -105,7 +104,6 @@
 * Anycast RP vormt meerdere PIM-SM domeinen met elk subdomein bestaande uit een RP.
 * Anycast adres is meestal secundair adres om problemen met dubbele router ids te voorkomen.
 
-<p style="page-break-after:always;"></p>
 ### 4.3. PIM Register Message Processing
 * Als PIM-SM DR een multicast pakket ontvangt, dan DR encapsuleert dit pakket in een Register bericht en zend het als een unicast pakket naar het RP voor de groep.
 * Dit bericht heeft bron (s) en groep adres (G). antwoord is gebaseerd op 2 factoren:
