@@ -48,6 +48,7 @@ Maak zonebestanden aan per DNS server:
     include "/etc/rndc.key";
     include "/etc/named.rfc1912.zones";
 
+<p style="page-break-after:always;"></p>
 **XX.us.zone**
 
     ;
