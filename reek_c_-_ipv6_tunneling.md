@@ -59,4 +59,4 @@
         * Knooppunt moet een globale unicast prefix ontvangen
             * Dit kan via uitwisseling van Router sollicication en Router Advertisement, berichten met de borderrouter, eventueel getunneld indien die zich op gescheiden IPv6 eilanden bevinden.
         * Default route binnen de routetabel van het knooppunt:
-            * Deze route moet zorgen dat berichten bestemd voor buiten de site afgeleverd worden aan de border router (hetzij via IPv6 routing, hetzij via ISATAP tunneling)/ 
+            * Deze route moet zorgen dat berichten bestemd voor buiten de site afgeleverd worden aan de border router (hetzij via IPv6 routing, hetzij via ISATAP tunneling). 
