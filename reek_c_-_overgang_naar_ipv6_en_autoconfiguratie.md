@@ -87,6 +87,7 @@ Werking:
 * Stateful configuratie
     * Indien de Managed Address Configuration valg in het router Advertisemenet bericht aan staat, wordt een stateful autoconfiguratie uitgevoerd om bijkomende adressen te bekomen.
 
+<p style="page-break-after:always;"></p>
 ### Stateful autoconfiguratie
 * Dit configuratiemechanisme maakt gebruik van een centrale server die toestandsinformatie bijhoudt van alle knooppunten.
 * Biedt zo een volledige controle over het adresseringsschema (ook interface-id's)
