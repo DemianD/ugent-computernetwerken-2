@@ -46,6 +46,15 @@
 
 <p style="page-break-after:always;"></p>
 ### Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) tunneling
+* ISATAP gaat IPv6 pakketten versturen tussen dual-stack knooppunten bovenop een IPv4 netwerk
+* Is een methode voor het aanmaken van linklokale IPv6 adressen van een IPv4 adres.
+* Is een mechanisme om  Buren te ontdekken bovenop IPv4
+
+Linklokale adressen aanmaken:
+* Maak linklokaal adres met:
+    * `fe80::0200:5efe:...` voor globale adressen
+    * `fe80::0000:5efe:...` voor private adressen
+
 * Dit mechanisme is gelijkaardig aan 6to4, maar biedt een oplossning voor tunneling tussen 2 subnetten van eenzelfde private netwerkinfrastructuur (verschillende IPv6 eilanden binnen eenzelfde site)
     * 6to4 faalt hierbij, aangezien beide subnetten dezelfde 6to4 prefix kennen en dus rechtstreeks met elkaar zouden moeten kunnen communiceren, zonder gebruik van een tunnel.
 * Om dit te verhelpen wordt het IPv4 eindpunt van de tunnel niet afgeleid van de prefix, maar van de laagste 32 bits van een ISATAP adres
