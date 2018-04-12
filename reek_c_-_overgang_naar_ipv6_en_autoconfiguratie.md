@@ -20,13 +20,16 @@
   * De configuratie van IPv4 is steeds statisch.
 
 <p style="page-break-after:always;"></p>
+
 ## Hoe zal deze overgang worden gerealizeerd ? Van welke technieken zal men gebruik maken ? Je moet hierbij onder andere tunneling in algemene termen beschrijven, echter zonder dieper in te gaan op de praktische uitwerking ervan. (§5.7 zonder subsecties)
+
 ### Aanpassingen
+
 * Op subnetwerkniveau enkel verwijzing naar hogere protocollaag aanpassen (ethernet frames)
 * Hogere protocollagen moeten niet aangepast worden, tenzij voor grotere adreslengte (checksum binnen tcp header)
 * De gerelateerde protocollen dienen ook aangepast te worden:
-    * ARP en IGMP verdwijnen
-    * ICMP zal aangepast worden naar ICMPv6
+  * ARP en IGMP verdwijnen
+  * ICMP zal aangepast worden naar ICMPv6
 * Ook hogere protocollen dienen aangepast te worden (DHCP en DNS)
 
 ### Realisatie
@@ -53,18 +56,21 @@ Om de overgang eenvoudig te realiseren wordt gebruikt gemaakt van volgende techn
   * Dit met behulp van de IPv4 gemapte adressen.
 
 <p style="page-break-after:always;"></p>
+
 ## Geef de alternatieve mogelijkheden voor autoconfiguratie in IPv6. Bespreek hierbij de opeenvolgende stappen. (§5.6)
+
 ### Identificatie Begrippen
+
 * Tentatief
-    * Adres is vastgelegd maar niet geverifieerd
-    * Controle gebeurt door Duplicate Address Detection
-    * Tijdens deze fase kan de client alleen multicast adressen ontvangen.
+  * Adres is vastgelegd maar niet geverifieerd
+  * Controle gebeurt door Duplicate Address Detection
+  * Tijdens deze fase kan de client alleen multicast adressen ontvangen.
 * Valid
-    * Eenmaal een uniek adres vastgelegd en bevestigd is, kan de client ook unicast data verzenden/ontvangen.
-    * Aangezien de levensduur van een adres beperkt is, bevindt de client zich steeds in een Preffered of Deprecated toestand.
+  * Eenmaal een uniek adres vastgelegd en bevestigd is, kan de client ook unicast data verzenden/ontvangen.
+  * Aangezien de levensduur van een adres beperkt is, bevindt de client zich steeds in een Preffered of Deprecated toestand.
 * Invalid
-    * Komt voor als levensduur verstreken is
-    * Client kan geen multicast en geen unicast verkeer verwerken.
+  * Komt voor als levensduur verstreken is
+  * Client kan geen multicast en geen unicast verkeer verwerken.
 
 ### Stateless autoconfiguratie
 
@@ -92,15 +98,17 @@ Werking:
   * Indien de Managed Address Configuration valg in het router Advertisemenet bericht aan staat, wordt een stateful autoconfiguratie uitgevoerd om bijkomende adressen te bekomen.
 
 <p style="page-break-after:always;"></p>
+
 ### Stateful autoconfiguratie
+
 * Dit configuratiemechanisme maakt gebruik van een centrale server die toestandsinformatie bijhoudt van alle knooppunten.
 * Biedt zo een volledige controle over het adresseringsschema (ook interface-id's)
 * Een dergelijke configuratie kan bekomen worden via het DHCPv6 protocol.
 * Enkele wijzigingen van DHCPv6 t.o.v. DHCP:
-    * Niet compatibel met het BOOTP protocol
-    * Interactie (servers, relay-agents, ...) gebeurt niet meer via broadcasting, maar via multicasting met een aantal permanente multicast adressen.
-    * Kan op stateless autoconfiguratie steunen om stateful autoconfiguratie te vereenvoudigen.
-    * Bepaalde opties worden niet langer ondersteind (bv optie 3)
-    * Kan aan dezelfde interface meerdere IPv6 adressen toewijzen.
-    * Toevoeging van het DHCP Reconfigure berichttype om op het initiatief van de server configuratiewijzigingen naar clients te sturen.
-    * Adres deprecation kan gebruikt worden om netwerken dynamisch te hernummeren.
+  * Niet compatibel met het BOOTP protocol
+  * Interactie (servers, relay-agents, ...) gebeurt niet meer via broadcasting, maar via multicasting met een aantal permanente multicast adressen.
+  * Kan op stateless autoconfiguratie steunen om stateful autoconfiguratie te vereenvoudigen.
+  * Bepaalde opties worden niet langer ondersteind (bv optie 3)
+  * Kan aan dezelfde interface meerdere IPv6 adressen toewijzen.
+  * Toevoeging van het DHCP Reconfigure berichttype om op het initiatief van de server configuratiewijzigingen naar clients te sturen.
+  * Adres deprecation kan gebruikt worden om netwerken dynamisch te hernummeren.

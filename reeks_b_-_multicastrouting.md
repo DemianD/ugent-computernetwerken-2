@@ -43,7 +43,9 @@
 * PIM-DM
 
 <p style="page-break-after:always;"></p>
+
 ### 2.2. Sparse Protocols
+
 * Gebruikt veronderstelling dat een sparse verdeling van subnetten met minstens 1 geinteresserde ontvanger bestaat. (meer consistent met wat er op het internet bestaat).
 * Gaat een core node aanduiden die alle actieve sources in een domein gaat tracken.
 * Sparse protocols volgen een explicit join model. Dit forward data enkel naar routers die het opvragen.
@@ -67,44 +69,49 @@
 * PIM-SM
 
 <p style="page-break-after:always;"></p>
+
 ## 3. Bespreek in detail de diverse facetten van het momenteel meest gebruikte multicastroutingprotocol.
+
 * 2 Versies
-    * Versie 1: Gebruikt IGMP berichten. IGMP versie = 1, IGMP type = 4 (router PIM berichten)
-    * Versie 2: Gebruikt IP Protocol 103
-        * 4 bits = versie nummer
-        * 4 bits = bericht type
-    * Versie 1 berichten zijn een subset van versie 2 berichten met bootstrap en kandidaat RP-Advertisements als toegevoegde berichten.
+  * Versie 1: Gebruikt IGMP berichten. IGMP versie = 1, IGMP type = 4 (router PIM berichten)
+  * Versie 2: Gebruikt IP Protocol 103
+    * 4 bits = versie nummer
+    * 4 bits = bericht type
+  * Versie 1 berichten zijn een subset van versie 2 berichten met bootstrap en kandidaat RP-Advertisements als toegevoegde berichten.
 * Opbouwen in 3 fasen:
-    * RPT opbouwen
-        * Client stuurt IGMP report naar dichtste upstream router
-        * Receive DR stuurt:
-            * PIM join bericht naar ALL-PIM-ROUTERS groep tot RP
-            * Elke router maakt nieuw join bericht
-            * Elke router gebruikt eigen RPF tabel om buur te bepalen
-    * SPT bron naar RP
-        * Bron start met multicast data
-        * PIM-SM designated router (DR) stuurt PIM Register berichten unicast naar RP.
-        * Als DR bericht van bron ontvangt stuurt hij register bericht.
-        * RP ontvangt register bericht.
-            * Pakket wordt doorgestuurd naar ontvangers
-            * (S,G) PIM join bericht sturen naar bron om SPT op te bouwen
-        * RP ontvangt dubbele pakketten
-            * RP stuurt register-stop naar DR
-        * DR stopt het sturen van register berichten.
-    * SPT Bron aan client opbouwen
-        * client stuurt (S,G) join naar RPF buur op weg naar bron om SPT te vormen.
-        * client ontvangt dubbele berichten (1 van bron en 1 van RP)
-        * Client stuurt prune bericht naar traagste
-        * Client ontvangt 1 exemplaar en dan is het optimale pad gerealiseerd.
+  * RPT opbouwen
+    * Client stuurt IGMP report naar dichtste upstream router
+    * Receive DR stuurt:
+      * PIM join bericht naar ALL-PIM-ROUTERS groep tot RP
+      * Elke router maakt nieuw join bericht
+      * Elke router gebruikt eigen RPF tabel om buur te bepalen
+  * SPT bron naar RP
+    * Bron start met multicast data
+    * PIM-SM designated router (DR) stuurt PIM Register berichten unicast naar RP.
+    * Als DR bericht van bron ontvangt stuurt hij register bericht.
+    * RP ontvangt register bericht.
+      * Pakket wordt doorgestuurd naar ontvangers
+      * (S,G) PIM join bericht sturen naar bron om SPT op te bouwen
+    * RP ontvangt dubbele pakketten
+      * RP stuurt register-stop naar DR
+    * DR stopt het sturen van register berichten.
+  * SPT Bron aan client opbouwen
+    * client stuurt (S,G) join naar RPF buur op weg naar bron om SPT te vormen.
+    * client ontvangt dubbele berichten (1 van bron en 1 van RP)
+    * Client stuurt prune bericht naar traagste
+    * Client ontvangt 1 exemplaar en dan is het optimale pad gerealiseerd.
 
 <p style="page-break-after:always;"></p>
+
 ## 4. Omschrijf de optionele technieken om de werking van dit protocol nog meer te optimaliseren.
+
 ### 4.1. Group-to-RP Mapping
+
 * PIM-SM vereist dat alle routers het actieve RP (rendezvous point) kennen.
 * Groep van PIM-SM zenders connecteren fysisch met/of tunnels die dezelfde RP-to-group mapping matrix overeenkomen.
 * Group-to-RP Mapping manieren:
-    * Statisch: configureer elke router manueel  met het adres van de RP voor elke multicast groep. (simpel maar vereist aanpassing  als het RP adres veranderd ook backup RP nodig).
-    * Dynamisch: PIM bootstrap router (BSR)
+  * Statisch: configureer elke router manueel met het adres van de RP voor elke multicast groep. (simpel maar vereist aanpassing als het RP adres veranderd ook backup RP nodig).
+  * Dynamisch: PIM bootstrap router (BSR)
 * PIM bootstrap = v2, om als RP-set mechanisme te gebruiken moet elke router v2 pakket formaten gebruiken. 1 router moet geselecteerd worden om te dienen als BSR.
 
 ### 4.2. Anycast RP
@@ -137,15 +144,18 @@
 * Dit bericht houd geconfigureerde DR prioriteit bij.
 
 <p style="page-break-after:always;"></p>
+
 ## 5. Hoe kan men een Linux toestel als multicastrouter laten werken? Geef 2 concrete voorbeelden. Geef aan hoe men de diverse multicastverkeerstromen kan opvolgen.
+
 Kernel flags aanzetten:
-* IPv4: 
-    * CONFIG_IP_MULTICAST=u
-    * CONFIG_IP_MROUTE=y
-    * CONFIG_IP_PIMSM_V2=y
+
+* IPv4:
+  * CONFIG_IP_MULTICAST=u
+  * CONFIG_IP_MROUTE=y
+  * CONFIG_IP_PIMSM_V2=y
 * IPv6:
-    * CONFIG_IPV6_MROUTE=y
-    * CONFIG_IPV6_PIMSM_V2=y
+  * CONFIG_IPV6_MROUTE=y
+  * CONFIG_IPV6_PIMSM_V2=y
 
 Stel router in als unicast forwarding:
 
@@ -168,24 +178,26 @@ Monitoren PIM-SM:
     show pim join
 
 <p style="page-break-after:always;"></p>
+
 ## 6. Sommige routers verzorgen in het multicastproces bijzondere rollen, die ze pas na specifieke verkiezingsprocessen toebedeeld krijgen. Geef een overzicht van deze bijzondere functies, en de overeenkomstige verkiezingsprocessen.
+
 * **Active Querier:**
-    * Verstuur Active querier Internet Group Management Protocol Query berichten met IP TTL van 1
-    * \> 1 router? ==> Selecteer router met laagst genummerde IP als active querier
-    * Andere versturen geen IGMP queries maar luisteren wel nog dei informatie die alle IGMP berichten bevatten. (sla op in cache).
+  * Verstuur Active querier Internet Group Management Protocol Query berichten met IP TTL van 1
+  * \> 1 router? ==> Selecteer router met laagst genummerde IP als active querier
+  * Andere versturen geen IGMP queries maar luisteren wel nog dei informatie die alle IGMP berichten bevatten. (sla op in cache).
 * **Designated Router:**
-    * Designated Router Hello berichten met DR prioriteit (standaard 0)
-    * De router met de hoogste DR prioriteit word verkozen als DR voor het subnet. 
-    * Als geen 1 DR prioriteit gebruikt, dan DR is router met hoogste IP.
+  * Designated Router Hello berichten met DR prioriteit (standaard 0)
+  * De router met de hoogste DR prioriteit word verkozen als DR voor het subnet.
+  * Als geen 1 DR prioriteit gebruikt, dan DR is router met hoogste IP.
 * **Rendezvous Point:**
-    * Dient als ontmoetingsplaats voor multicast listeners en bronnen.
-    * Alle routers moeten RP kennen, dit op 2 manieren:
-        *  Manueel statisch invullen van het RP bij elke router.
-        *  Dynamisch door PIM Bootstrap (Bootstrap Router BSR)
+  * Dient als ontmoetingsplaats voor multicast listeners en bronnen.
+  * Alle routers moeten RP kennen, dit op 2 manieren:
+    * Manueel statisch invullen van het RP bij elke router.
+    * Dynamisch door PIM Bootstrap (Bootstrap Router BSR)
 * **BSR:**
-    * Standaard is BSR prioriteit 0, dan is router niet geschikt als BSR
-    * Minstens 1 router moet BSR Prioriteit > 0 hebben
-    * Elke kandidaat stuurt bootstrap berichten uit op al zijn interfaces
-    * Elke buur verwerkt dit en stuurt kopie naar al zijn buren behalve op interface ontvangen.
-    * Als kandidaat BSR boostrap ontvangt met BSR > zijn eigen, dan stopt deze met adverteren.
-    * Uiteindelijk 1 router over, deze is nu het RP.
+  * Standaard is BSR prioriteit 0, dan is router niet geschikt als BSR
+  * Minstens 1 router moet BSR Prioriteit > 0 hebben
+  * Elke kandidaat stuurt bootstrap berichten uit op al zijn interfaces
+  * Elke buur verwerkt dit en stuurt kopie naar al zijn buren behalve op interface ontvangen.
+  * Als kandidaat BSR boostrap ontvangt met BSR > zijn eigen, dan stopt deze met adverteren.
+  * Uiteindelijk 1 router over, deze is nu het RP.

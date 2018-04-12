@@ -34,10 +34,15 @@ RIP berichten worden ingekapseld in UDP segmenten met poortnummers 520. Deze pak
 | routing loop      | Berichten worden heen en weer gestuurd zolang de TTL niet 0 is, dit kan leiden tot een overbelasting van het netwerk en dus verlies van pakketten.                                                                                                                                                                                             |
 
 <p style="page-break-after:always;"></p>
+
 ### 3.2. Wat wordt bedoelt met reductie van de convergentieperiode (inclusief oorzaken)? Bespreek de verschillende technieken om dit te verwezenlijken.
+
 #### Reductie Convergentieperiode
+
 De reductie van de convergentieperiode gaat de tijd verminderen die nodig is om bij een wijziging terug tot een stabiele toestand te komen.
+
 #### Oorzaken
+
 * Indien enkel de kleinste metrieken bijgehouden worden, worden meldingen van alternatieve paden met hogere metriek genegeerd.
 * Lifetime parameter van RIP routes is standaard 3 minuten.
 * Routers synchroniseren periodiek waardoor er willekeur is in het uitwisselingsproces.
@@ -52,8 +57,11 @@ De reductie van de convergentieperiode gaat de tijd verminderen die nodig is om 
 | General RIP Request | Bij opstart router wordt dit gebroadcast, de ondersteunde routers gaan nu hun volledige routing tabel doorsturen. Dit wordt gericht gestuurd en voorkomt de 30 secondenwachttijd voor hij de actuele info heeft                                                                                                                                                                         |
 
 <p style="page-break-after:always;"></p>
+
 ### 3.3. Bespreek de verschillende verbeteringen van RIPv2 ten opzichte van RIPv1
+
 #### Multicasting
+
 RIPv1 Broadcast berichten (maakt silent RIP mogelijk) waardoor er meer netwerkverkeer is. Bij RIPv2 wordt er optioneel naar het multicast adres 224.0.0.9 gestuurd wat het verkeer ten goede komt.
 
 #### Subnetmasker binnen route vectoren

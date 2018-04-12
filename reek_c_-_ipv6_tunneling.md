@@ -27,13 +27,15 @@
 * het eindpunt moet steeds IPv4 compatibel zijn, waardoor er geen gebruik kan gemaakt worden van de volle 128-bits adresruimte. (Dus enkel toepasbaar op kleine netwerkomgevingen)
 
 <p style="page-break-after:always;"></p>
+
 ### Geconfigureerde IPv6 over IPv4 tunneling
+
 * Hierbij worden routers zo geconfigureerd om IPv6 pakketten die over een IPv4 netwerk moeten, via een expliciet geconfigureerde tunnel te sturen.
 * Deze tunnel manifesteert zich dikwijls als een aparte interface, waarbij het eindpunt steeds vastligt.
 * Het grote voordeel is dat de eindpunten niet IPv4 compatibel dienen te zijn en dus de hele IPv6 adresruimte beschikbaar is.
 * Tunneling:
-    * Vooral router-to-router tunneling
-    * Indien beginknooppunt een standalon IPv6 knooppunt is, kan ook host-to-router tunneling bekomen worden.
+  * Vooral router-to-router tunneling
+  * Indien beginknooppunt een standalon IPv6 knooppunt is, kan ook host-to-router tunneling bekomen worden.
 
 ### 6to4 tunneling
 
@@ -50,10 +52,12 @@
 * Het gorte nadeel aan deze tunnelingtechniek is dat de routingtabellen hun huidige grootte behouden, en een global hernummering zal nodig zijn om een reguliere IPv6 adresseringsschema te bekomen.
 
 <p style="page-break-after:always;"></p>
+
 ### Intra-Site Automatic Tunnel Addressing Protocol (ISATAP) tunneling
+
 * ISATAP gaat IPv6 pakketten versturen tussen dual-stack knooppunten bovenop een IPv4 netwerk
 * Is een methode voor het aanmaken van linklokale IPv6 adressen van een IPv4 adres.
-* Is een mechanisme om  Buren te ontdekken bovenop IPv4
+* Is een mechanisme om Buren te ontdekken bovenop IPv4
 
 Linklokale adressen aanmaken:
 

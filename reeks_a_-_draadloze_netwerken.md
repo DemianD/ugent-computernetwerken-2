@@ -28,11 +28,12 @@
             Basic rates (Mbps)  : 1 2 5.5 11
             Other rates (Mbps)  : 6 9 12 18 24 36 48 54
 
-
 <p style="page-break-after:always;"></p>
+
 #### Output netsh wlan sh int
+
     There is 1 interface on the system:
-     
+
         Name                    : Wi-Fi
         Description             : Qualcomm Atheros AR938x Wireless Network Adapter
         GUID                    : 3e423c56-0869-436c-b2ce-c7618f572880
@@ -50,10 +51,11 @@
         Transmit rate (Mbps)    : 54
         Signal                  : 58%
         Profile                 : Geerinck Beneden
-    
+
         Hosted network status   : Not available
-    
+
 ### 5.2. In welk opzicht zijn Ad Hoc routingprotocollen (in wireless meshes) anders dan de meer traditionele routingprotocollen (bedoeld voor internetwerken die uit bekabelde subnetwerken bestaan)?
+
 * Eventuele mobiliteit van de routers
 * Uitvallen en herstel van verbindingen meer frequent, met variabele kwaliteit van de link
 * Bijkomende criteria voor performantie en metriek, zoals stabiliteit onder mobiele omstandigheden, energie verbruik, signaal/ruis verhouding, ...
@@ -68,8 +70,11 @@
 | Reactieve of on-demand protocollen     | Pas als we bericht versturen zoeken we een pad, de discovered paths worden gecached voor performantiewinst | Ad Hoc On Demand Distance Vector Routing (AODV) | - Minder netwerkverkeer<br />- Werkt in grote situaties met duizenden knooppunten         | - Initiele vertraging voor gegevensoverdracht mogelijk is (ICMP Unreacable) |
 
 <p style="page-break-after:always;"></p>
+
 ### 5.4. Bespreek een concreet voorbeeld van een implementatie die tot 1 van deze categorieen behoort, met vooral aandacht voor de verschillen met het traditionele routingprotocol (voor bekapelde internetwerken), waarvan het is afgeleid.
+
 #### Optimized Link State Routing : OLSR
+
 * LSA's router enkel doorgestuurd door beperkt aantal buren.
 * Minder overhead door meer selectieve flooding
 * Alle routes verwijzen naar een MPR (Multi Point Relay) als eerste hop naar de eindbestemming.

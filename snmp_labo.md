@@ -33,7 +33,9 @@
 | Context-specific | SNMPv2Trap     | 1010 0111 | A7H |
 
 <p style="page-break-after:always;"></p>
+
 ## Length
+
 * Lengte van het waardeveld
 * Als > 128 dan 1n|xxxxxxxx|xxxxxxxx|... (n = aantal bytes)
 * Als <= 127, 1 byte met lengte
@@ -60,25 +62,28 @@ Vb:
 ![diagram](https://lh3.googleusercontent.com/ejMj28QGT4M0SL22vXRaYjIsgOWBtmInmWs0H2x51V4=s1000 "snmp_diagram.png")
 
 <p style="page-break-after:always;"></p>
-## SNMP Message : GetRequest 
+
+## SNMP Message : GetRequest
+
 ### Definitie
-	GetRequestMessage ::= SEQUENCE {
-		version INTEGER,
-		community OCTET STRING,
-		protocolDataUnit SEQUENCE {
-			requestDataUnit SEQUENCE {
-				requestID INTEGER,
-				errorStatus INTEGER (0-5),
-				errorIndex INTEGER,
-				varBindList SEQUENCE OF {
-					varBind SEQUENCE {
-						name OBJECT IDENTIFIER,
-						value ObjectSyntax
-					}
-				}
-			}
-		}
-	}
+
+    GetRequestMessage ::= SEQUENCE {
+    	version INTEGER,
+    	community OCTET STRING,
+    	protocolDataUnit SEQUENCE {
+    		requestDataUnit SEQUENCE {
+    			requestID INTEGER,
+    			errorStatus INTEGER (0-5),
+    			errorIndex INTEGER,
+    			varBindList SEQUENCE OF {
+    				varBind SEQUENCE {
+    					name OBJECT IDENTIFIER,
+    					value ObjectSyntax
+    				}
+    			}
+    		}
+    	}
+    }
 
 ### Error Values
 
@@ -177,7 +182,9 @@ EA = 234
     }
 
 <p style="page-break-after:always;"></p>
+
 ## Commando's
+
 ```bash
 net hexdump -c bestand # Print bestand
 nc -uvw1 localhost 161 < bestand -o con: > nul: #(> con: > nul: stuurt output naar NULL)
@@ -188,8 +195,11 @@ snmpbulkwalk -d -v2c -cr10 localhost hrSwInstalledName 2>&1 | grep Received | wc
 snmpbulkget -d -v2c localhost hrMemorySize domPrimaryDomain -Cn2 -Cr5
 snmpset beelzebub sysContact.0 s emailhere # Zet de waarde op
 ```
+
 ## Voorbeelden
+
 ### GetRequest
+
 30 28 02 01 00 04 06 70 75 62 60 69 63 A0 1B 02 02 40 AD 02 01 00 02 01 00 30 0F 30 0D 06 09 2B 06 01 02 01 19 02 02 00 05 00
 
     30 28 SEQUENCE Length 28

@@ -33,11 +33,13 @@ Bij routing hebben we verschillende termen:
 | lifetime                  | Zorgt ervoor dat routes expiren waardoor de routes up to date blijven (voobadral bij automatische routingtabellen)                                                  |
 
 <p style="page-break-after:always;"></p>
+
 #### Problemen
-|Probleem|Uitleg|
-|--------|------|
-|Routing Loops|Treedt op als routingtabel voor eindbestemming pad construeert dat terugverwijst naar 1 van de intermediaire routers van het pad. Hierdoor worden berichten rondgestuurd tot TTL verstreken is.|
-|Black holes|Treedt op als het pad naar de eindbestemming niet meer functioneert en dit falen nog niet is opgenomen in de routingtabel van de vorige router op het pad. De router gaat dus IP-datagrammen blijven sturen naar de black hole router en die zullen allemaal verloren gaan.|
+
+| Probleem      | Uitleg                                                                                                                                                                                                                                                                      |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Routing Loops | Treedt op als routingtabel voor eindbestemming pad construeert dat terugverwijst naar 1 van de intermediaire routers van het pad. Hierdoor worden berichten rondgestuurd tot TTL verstreken is.                                                                             |
+| Black holes   | Treedt op als het pad naar de eindbestemming niet meer functioneert en dit falen nog niet is opgenomen in de routingtabel van de vorige router op het pad. De router gaat dus IP-datagrammen blijven sturen naar de black hole router en die zullen allemaal verloren gaan. |
 
 ### 2.2 Geef de diverse (inclusief de meest eenvoudige) alternatieven om de routingtabel van niet-routers (o.a. toestellen die slechts op 1 subnetwerk zijn aangesloten) te configureren. Indien er hiertoe op Linux of Windows bijzondere componenten moeten geinstalleerd of geconfigureerd worden, bespreek hoe dit moet gebeuren.
 
@@ -48,14 +50,17 @@ Bij routing hebben we verschillende termen:
 | Eavesdropping of wiretapping            | Wissel berichten uit via broadcast, hierdoor kunnen werkposten passief meeluisteren en hun routingtabellen aanpassen.<br />- **Op Linux:** Activeren met `routed -q`<br />- **Op Windows:** Installeer RIP Listener via `Control Panel -> Add or remove windows component -> Network Services -> RIP Listener`. (Er wordt enkel naar RIPv1 geluisterd).                                                                                                                                                                                                                                                                                                                        |
 
 <p style="page-break-after:always;"></p>
+
 ### 2.3 Vergelijk de voor- en nadelen van statische en dynamische routing, zonder in detail in te gaan op specifieke routingprocotollen.
-#### Statisch: 
-|Voordelen|Nadelen|
-|---------|-------|
-|Gemakkelijk te implementeren in een klein netwerk|Enkel goed voor makkelijke topologieen|
-|Veilig, geen advertisements verzonden|Configuratie moeilijkheid verhoogt snel|
-|Voorspelbaar|Als link faalt, dan kan men geen verkeer rerouten, dus manuele interventie nodig|
-|Geen algoritme nodig, dus CPU en RAM besparing||
+
+#### Statisch:
+
+| Voordelen                                         | Nadelen                                                                          |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Gemakkelijk te implementeren in een klein netwerk | Enkel goed voor makkelijke topologieen                                           |
+| Veilig, geen advertisements verzonden             | Configuratie moeilijkheid verhoogt snel                                          |
+| Voorspelbaar                                      | Als link faalt, dan kan men geen verkeer rerouten, dus manuele interventie nodig |
+| Geen algoritme nodig, dus CPU en RAM besparing    |                                                                                  |
 
 #### Dynamisch:
 
@@ -67,9 +72,13 @@ Bij routing hebben we verschillende termen:
 |                                                   | Meer CPU, RAM en bandwith nodig                                                                                                       |
 
 <p style="page-break-after:always;"></p>
+
 ### 2.4 Maak een classificatie van routingprotocollen, volgens 2 criteria. Omschrijf de terminologie die je hierbij invoert. Geef ondermeer aan op welk niveau hetzelfde routingprotocol actief kan zijn, en hoe aan schaalbeperking kan worden gedaan. Geef van elke klasse de meest courante vertegenwoordigers. Het is niet de bedoeling in te gaan op een gedetailleerde vergelijking tussen de verschillende klassen en hun specifieke vertegenwoordigers.
+
 #### Volgens Routingprotocollen
+
 ##### Interior Gateway Protocollen (IGP) / Intra-domein protocollen
+
 Wisselt routing informatie uit tussen gateways binnen eenzelfde autonoom systeem. Berekenen de beste routes naar om het even welke eindbestemming en verspreiden deze info over alle routers.
 
 * Routing Information Protocol (RIP)

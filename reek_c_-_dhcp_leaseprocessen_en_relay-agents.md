@@ -33,7 +33,7 @@ We duiden het type aan met de optie 53
     * Zoals DHCP Discovery optie 55
 
 <p style="page-break-after:always;"></p>
-## Bespreek in detail de opeenvolgende stappen van beide DHCP leaseprocessen.
+ ## Bespreek in detail de opeenvolgende stappen van beide DHCP leaseprocessen.
 * **Initialisatie**
     * Client broadcast een DHCP discovery bericht
         * Bronadres: 0.0.0.0
@@ -64,10 +64,13 @@ We duiden het type aan met de optie 53
             * Herstart initialisatieproces.
 
 <p style="page-break-after:always;"></p>
+
 ## Bespreek het doel en (in detail) de werking van DHCP relay-agents. Welke velden in DHCP berichten helpen deze functie realiseren ?
+
 ### Doel
+
 * DHCP maakt gebruik van broadcast en zal dus enkel werken op een enkel subnet
-    * Routers laten broadcastberichten niet door
+  * Routers laten broadcastberichten niet door
 * Een relay agent maakt het mogelijk om DHCP broadcastberichten door te sturen naar andere subnetten.
 
 ### Werking
@@ -98,12 +101,14 @@ We duiden het type aan met de optie 53
   * Windows: `hive register`
 
 <p style="page-break-after:always;"></p>
+
 ## Beschrijf wat er gebeurt indien een Windows Server of Linux DHCP-cliënt in eerste instantie geen DHCP-server kan bereiken.
+
 * Linux en Windows DHCP clients kunnen zichzelf configureren om met een tijdelijke IP-configuratie te werken
 * = Automatic Private IP Addressing (APIPA) (of automatische IP Configuratie)
 * Toegewezen uit gereserveerde klasse B bereik 169.254/16
-    * Dit bereik wordt niet op het internet gebruikt
+  * Dit bereik wordt niet op het internet gebruikt
 * De DHCP client voert een conflictdetectie uit met een Gratuitous ARP aanvraag
-    * Indien duplicaat IP adres wordt een nieuw random IP adres gekozen in dit bereik
+  * Indien duplicaat IP adres wordt een nieuw random IP adres gekozen in dit bereik
 * Na toewijzing van het tijdelijke adres blijven de clients in de achtergrond op periodieke intervallen contact zoeken met een DHCP Server
-    * Indien toch DHCP Server gevonden, wordt een lease aangevraagd en vervalt het tijdelijke adres.
+  * Indien toch DHCP Server gevonden, wordt een lease aangevraagd en vervalt het tijdelijke adres.
