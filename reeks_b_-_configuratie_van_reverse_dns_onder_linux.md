@@ -1,10 +1,14 @@
 # Reeks B - Configuratie van reverse DNS onder Linux
+
 ## Wat wordt beoogd met reverse DNS ? Hoe wordt dit gerealiseerd ? (§3.3.2)
+
 ### Wat
+
 * Technologie die toelaat om domeinnaam te vinden voor gegeven IP
 * Toegepast als beveiligingscontrole
 
 ### Hoe
+
 * DNS PTR-type Records zorgen verantwoordelijk voor de omzetting.
 * Elk IP heeft in-addr.arpa: `z.y.x.w.in-addr.arpa`, dit komt uit bij de machine die we zoeken.
 * Om Reverse DNS toe te laten, moeten we primaire nameservers configureren in het zonebestand. Zie onderstaand voorbeeld.
@@ -40,6 +44,7 @@
 ```
 
 **named.conf**
+
 ```bash
 zone "16.168.192.in-addr.arpa" {
 	type master;
