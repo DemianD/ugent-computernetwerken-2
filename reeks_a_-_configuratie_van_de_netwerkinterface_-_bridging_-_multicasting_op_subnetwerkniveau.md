@@ -22,6 +22,7 @@
 |`/etc/sysconfig/network-scripts`|Bevat files die worden gebruikt voor configuratie interfaces on boot, vb: `ifcfg-etho0` keys in deze file zijn: DEVICE, IPADDR, NETMASK en ONBOOT|
 
 <br />
+
 ### 1.2. Bespreek het equivalent onder Windows Server, zowel via de Command Prompt, als via de grafische interface.
 #### Command Prompt
 |Commando|Werking|
@@ -48,6 +49,7 @@ We hebben in het labo het Spanning Tree Protocol algoritme gebruikt, dit voorkom
 4. Breek gelijkheden op.
 
 <p style="page-break-after:always;"></p>
+
 ### 1.4. Hoe kun je, via de uitvoer van een enkele opdracht, op een als bridge geconfigureerd Linux toestel op diverse manieren controleren dat de juiste poorten geblokkeerd zijn, en om welke reden de andere poorten geactiveerd moeten blijven?
 Ze kunnen de topologie bekijken door het commando `brctl showstp <bridgename>` uit te voeren.
 
@@ -94,7 +96,9 @@ Hier zien we onder het subdeel br wie onze root bridge is en onder de interfaces
 De state blocking betekent dat deze bridge geen paketten gaat forwarden. De geblokkeerde interfaces zijn de interfaces die loops veroorzaken in het netwerk.
 
 Blocking staat juist als de interface geen designated root is of een designated port.
+
 <p style="page-break-after:always;"></p>
+
 ### 1.5. Hoe weet een multicast bron of router dat hij verantwoordelijk is om multicast berichten af te leveren aan clients (niet-routers) op de diverse subnetwerken waarop hijzelf is aangesloten. Bespreek de addressering en het protocol dat hierbij gehanteerd wordt, inclusief de bijkomende faciliteiten van meer recente versies ervan. Vermeld eveneens de Linux opdracht die hieromtrent informatie kan verschaffen.
 #### Hoe weet men dat men verantwoordelijk is?
 Volgens RFC1112 is vastgelegd dat als het IP Multicast Datagram zijn TTL groter is dan 1 dat deze bron verantwoordelijk is voor het afleveren aan clients. 
